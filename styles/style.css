@@ -303,7 +303,9 @@ nav a:hover {
 }
 
 @media (max-width:635px){
-#jawn {display:none;}}
+#jawn {display:none;}
+#banner {padding-top: 20px;}
+}
 
 #jawn {
   width:min(18vw,160px);
