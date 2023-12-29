@@ -217,12 +217,6 @@ nav a:hover {
    }
 }
 
-/*for Demo Only*/
-.demo-row {
-  background-color: #333;
-  padding: 50px 0;
-}
-
 
 /*Implement*/
 
@@ -267,8 +261,8 @@ nav a:hover {
 }
 
 @media (max-width:576px){
-  banner{font-size: 5vw; line-height: 5vw;
-  footer{height:400px}}
+  banner{font-size: 5vw; line-height: 5vw;  padding-top: 30px;
+  }
 }
 
 @keyframes moveToRight {
@@ -308,11 +302,10 @@ nav a:hover {
   animation-delay: 10ms;
 }
 
-@media (max-width:658px){
+@media (max-width:635px){
 #jawn {display:none;}}
 
 #jawn {
-  height: min(8vw,80px);
   width:min(18vw,160px);
   margin-top: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -328,6 +321,11 @@ nav a:hover {
   color:#561c31;
 }
 
+html {width:100%;}
+
+@media (max-width:635){
+  #jawn{font-size: 2vw;}
+}
 @media (min-width:768){
   #jawn{ font-size: 3vw
  }}
