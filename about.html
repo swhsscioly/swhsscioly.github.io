@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"    
+    content="width=device-width, 
+    initial-scale=1.0">
+    <title>SWHS Science Olympiad</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+      body p {font-size: 1.3rem; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+      #naren{padding-top:20px}
+    </style>
+
+</head>
+
+<div class="wrapper"> 
+
+  <nav class="navbar bg-body-tertiary fixed-top" style="padding-top:0px; padding-bottom:0px" >
+    <div class="container-fluid">
+      <img class="bobcats-logo" src="images/Bobcats_Logo_prev_ui.png" style="height:5vw; padding-top: 3px; padding-bottom:3px">
+      <a class="navbar-brand" href="index.html">     
+           South Windsor High School Science Olympiad
+        </a>
+        <a class="navbar-brand" id = "navbar-small"  href="index.html">     
+          South Windsor High School Science Olympiad
+       </a>
+      <button style = "color:#561c31;" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">SWHS Science Olympiad</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html"> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="photos.html" >Photos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sponsors.html">Sponsors</a>
+            </li>
+            <li class="nav-item dropdown">
+            
+              <div class="embedded">
+                <a href="contact.html" target="_blank"><img width = "45px" src="data:image/png;base64,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"></a> 
+             <a href="https://www.instagram.com/swhsscioly?igsh=OGQ5ZDc2ODk2ZA==" target="_blank"><img height="36px" style="padding-left: 20px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png"></a>
+              </div>
+                      </div><div class="embed"><p id="pluh"> Latest News: </p>
+                        <embed src="images/SWHS’s Renowned Science Olympiad – The Bobcat Prowl.html" width="100%" height="300px">
+                      </div>
+      </div>
+    </div>
+  </nav>
+
+<body>
+  <script>
+    var viewportWidth  = document.documentElement.clientWidth*0.50984308130;
+    document.getElementsByClassName("image-container-homepage")[0].style.height=viewportWidth;
+  </script>
+    <div class="background">
+      <script>
+        setTimeout(main, 1900);
+        function main(){
+        document.getElementById("c").innerHTML="<p id='banner' > Connecticut's Science Olympiad champion for 2 years in a row</p><button type='button' id='jawn' onclick='window.scroll(1000,600)' style=' margin-top: 50px font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bolder' class='btn btn-outline-dark'>Read More</button>";}
+      </script>
+
+  <div class="image-container-homepage">
+    <div class = "centered" id="c">
+      <script>
+        if(document.getElementById("jawn").clicked==true){
+          window.scroll(1000,600);
+        }
+      </script>
+
+    </div>
+    <img class = "image-homepage" src="images/Homepage_Photo.jpg" alt = "SWHS Scioly Team at Cornell" width = "100%" style="padding-top: 70px; ">          
+    </div>
+      </div>       
+
+        <div class="clutch">
+
+          <div class="card" style="width: 18rem;">
+            <img src="https://imgs.search.brave.com/9z5A8MdAyJ3OzUQNo6cRsyjx69921wxRRuv08VkKqNI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNTIw/NjYxODU5L3Bob3Rv/L2dvbGRlbi1udW1i/ZXItdGhyZWUtb24t/d2hpdGUuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPUtOXzJ4/MEZod2xFeGFjQ2xV/d1o1QTVKREVXMGo3/MUp0NHhFQjRMN3l5/LU09" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">1st place trophies at CT State Science Olympiad</p>
+            </div>
+          </div>
+        <div class="card" style="width: 18rem;">
+          <img src="https://img.freepik.com/premium-photo/number-14-isolated-white-background_2227-884.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">2nd place trophies at CT State Tournament</p>
+          </div>
+        </div>
+          <div class="card" style="width: 18rem;">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEA8PDxAQEBUPDxAQEBAPDQ8PDg8PFRUWFhURFRUYHiggGBolHRUVITEiJSkrLi4uGB8zODMtNygtLisBCgoKDQ0NDw0NDysZFRkrKzc3KzcrLSsrLTc3KysrKzc3Kys3KysrNzctNy0rKysrKysrKysrKysrKysrKysrK//AABEIAMcA/QMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAwUBAgQGB//EAEYQAAIBAgIFCAYGBwcFAAAAAAABAgMRBBIFITFBUQYTUmFxgZHBIjJyobHRFEJTgrLwFkRikqLC0gcjM0NjhLMkVJPh8f/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAwDAQACEQMRAD8A+2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMN21vVba3sSOWdeUvU9FdNrW/ZT+L8AOirVjFXlJR7Xa/YQ/Sr+rCb62si/i1+40p0op3td75S1yfebuQB1p8Ir7zfkavES6vA1kyKTIqX6Y1tXgzaOPhsd13a/Df3XOKbIaiT1PWBeQkmk0009jTumbHlKlephnzkZPI/WT15X0nxXXtLfBaZhO0Z+g3vv6D79xUWgAAAAAAAMSaSbepLW29iRxfTntUNW68rNrja2oYqpneVerF6/2pLd2L49hBJkE30974r965h6R/Z95ySIpBXXU0vlTbjqSbfpbl3HBorlBUqQhVqQSVSKlkjtgmrpX3v8AOo4dPVMmHq22zSpx9qo1BfiFGNoxS3JBHrcPXjUV4O/Hiu1Ep53Q8W60bX1KTdt6t87HoigAAAAAAAAa1JqKcpOyW1s2I69GM4yhJXUlZrzXWBw1Krm7vUl6sX+KXX1bu02zHHRcoylSm7yhsfTg/Vn5PrR0JkVLmM3I7i4GZMjkzZmkgNJEUiSSIpEEdVXunrT1NPY1wKfDxyudJ/5btHi4PXH5dxcSKnFO2Jh/qUZX7YSjb/kZRfaEx7uqU37Df4fkXZ5CPo2lvTuu3cz1lGpmjGXSin4oqNwAAOfE1beitr2vgvmSVqmVdb2Lz7Dhb/8AvF8QMNkcmbM0kRUciNskkRSIKbT0s0sNT6dbO/Zpxb/E4HUcWJefGJfY4dfvVZN/CkvE7SxFtoCGupLglHx1v4Iuiv0JTtSv0pN92zyLAoAAAAAAAAAADh0phHOKnD/Ep3cP2lvpvqfxscmHqqcVJb9z1NPemtzRclDpqM6DlXpQ5xVNU4J2Sq7I1L7k9/iSjbG46FGKc27ydoQis1ScujFbynxONqz9ebpL7KjJc59+rufVE4c8szqSlnqSVpT2KMehBfVj8TTMB0cxh5evTlfpRrTjNPjfiXmjLqlHNOVS11GU7Z2k9Wbi+sqdFaNqYh6vRin6U2tXYuLL90I00oQvaPF3bb3/AAA0kRyJGRyIqKRUY6X/AFWHX+lXf8VJFxNFHOWfGVHuo0YU/vSbnJeHNlHe2el0U70afY14SZ5i56jRkbUaa/Zv46/MqOo1nNRTb2I2K6vXzvV6q9XrfS+XjwAVJtu78OC4fn5GgMEVhmrMxmns3NrvWpmsiCOTI5EkiGtUUYyk9kU5PsSuBR4B5quKqcazgvZppQt+9GXid6lYr9CQaoU3LU5rnJe1P0pe+TLLDwzThHpSS8WaiPUYOGWnBcIq/btZMAAAAAAAAAAAAAw0ZAHLV0dRl61KD61FJ+KOOpydw72KUfZm/O5bEVesoK71t6kltk+AEc8tKChBKKSskty4nBN7zaUm7tu7e3h2LqNGRWjNXqNmRyIOfF1404TqTdowi5SfUtZQaNk8rnPVKrOVSa4OX1e5WXcbaexfOz5iPqU5KVZ9Ka1xp92pvrsuJCqpYi1w15zjBbZNL/2e1jFJJLYlZdiPO8lcA9deS2pxpp++Xl4l3i6+SPW9S+ZRFjq/1F9/s6Pf8O05URRf54skRFbnFpfGOlBKNucqzjSoxe+rN2TfUtr6kdVarGnGU5tRUU5Sb2JLeeV0TiJ4zHLEOLVKhGrzV1qurR1cZZpJvhZLcyD1MKajFRje0Ukm9rS3vrMM2ZowNJFZyinlw1VLbUy0Y9tSShf+ItGyk0/LNPC0+lVlUfs04v8AmlACSC1LsLDQsL1o/sqUvdbzOAueTtP/ABJezFfF+RpF0AAAAAAAAAAAAAAEOJxEaau9beyK2yYGcRXUFd9iS2yfBFbKTk80tr8Iror86zRzcnmltfhFcEZuRWWYkZNWyDRlLp7Sbp2o0n/ezW3bzUX9Z9fDx3a59MaU5r+7p2lVkvRi/VhHpz6ureeeo0srlKTc5zd5Te1sokw9FQjlXa29bb3st9C6J56d3qjH1n/Kuv4HLorR88RPLHVFevO2qK831HusLh40oKEFZRW/a+tviVG/owjqslFWSWpJLcUtevnk3u3dhJpXGXfNx3et28DjgyDoiySLIkU/KPEYhwlRwtKpUlKLzzhF2ireopbFJ+5PrRFU/KTSc8XV+i0JWpwalVqLXez2rjrTUd105a1FJ+g5NU3GlKP1abjSgujZZpLvzQ8DzWhtHV6McssNXTbzTfMt5pbL6uxJcEkj2OjKThSgpJqTzTkmrSWZtxTW5qOVdwHSzWRvsI2wNZFDi3mxj4UcPFfeqSbfuhHxL1lFg6M5VMTVyu1StJRbsrwglTTV93ot94HQek0HTy0U+lJy8vI85NOOt2XbKPzL/C6ToRhCLm9UUn6E9tte7iaRaAgw2KhUTcHezs9TWvvJwAAAAAAAAABFiK6gm2BjE4hQV3t3LiU8qjlLNLW/clwRHWxDnK77hFkVMmbXNEZTINio0vpbI+Zo2nVe3fGkulLr6vy4NLaZeZ0MO05rVUq7Y0upcZfD4cOEoqCstbbvKTd5SlxbAh5rLe7cpSd5zeuU5dZY6K0POu+jFP0pW2dS4s69EaHdaWeV1BPbvlbdH5nraNKMIqMUopakkaRHhMLClBQpqyXi3xb3sj0nXdOlKS26ku1tLzv3HWU/KWraEI9Kd+5J3+KAp6cjqhqOGmzphIyrqiyRMggySLAlTM3NRcDLZqzNzVgasjmiV6u0hkwKXS7zV8LT6PO1n3JQX/I/AnuctSWbF1n9lTpUl1N3nL3Sh4HQ2WI9RoCnain05Sl5eRZEGBp5KdOPCEb9ttfvJygAAAAAAACHE4iNOLlJ2S/Nutnm8VjZVZXepblw631kencS5VpRvqhZJbk7LM+2/wADmpyJquyDJ6cjkhImiyDpUjnx9CdSOSFXmU75pxhnqW4R1rL2kkWbpgVFHk7CEVFVppLhSgu/W2SrQcF/nVX9yPky0NWwOdUqqSUcVXSWpLLGyXD1hmrL9ZrP7kf6yVs0bKOPEaUqwnGnz1VylFz1xioqKaW1Seu74bmb6SrSlGgpycpZHN32+lJ+UYlXVmnia09uSNOlHgrJzf414GK0IzeaazOyV23eyVkgjups6IMsKfJTC5Y5ozTyrNarNelbXvD5JYXjWXZXkMHNFnRHUHyRw+6piV2Yh/I1/RGj9vjF2Yhf0jFbpmbka0XDDXUalao5O7dapncUlsWpWWv3GbkG9zVsM1bAxJkbKHS2JqyxE6dOrKmqdKnfLsc5OTd12ZfEhj9I/wC5k/uP+oo30dPNz1T7WvVkvZUskfdBFlhqWapCHSlFdzessOT3J+CoU3OUtjso+irJtLbd7uJd4fRtGm04wV1sk25NeJUdYAAAAADAuBkwzFzj0tilToVZtpZacrNuyzNWj72gPGVsRnqTn05yl4u5PTdtu/cVVDFwX1o9XpKx0U8VF/WXijKrOEieDOClWXE6IVAOxMkjI5VUNucAncjGYh5wxzgE2Yw2RuaW3acWlcZzdCtU3wpTkvas7e+wFDhMRm5yp9rVqT+65NR/hUSz0aucq0odKpFPsvr91zxT0qqL5vdTUYfupJnquQ2Pp1cQpqWqnGbbepZmsqV9l/Sv3FR9OuDkljYLW5LxIJ6YpL6xRZAqHp+gvrClp+jKUYRldykoxVtrbsgNNJ1L1GuCS8dfmc6du34EWJrXnN8ZO3ZuNOcIqZyMXIecI8TilCE5vZCEpvsim/Ig8v8ASlKtiJ9KvNL2YWpr8HvOiNc8Ri9MOhKMG02oxzreptZpX72y45Naap169KGtLnIZ208sY3Td5bFq4lR9pwdLJTpw6MIp9qWslOCGkqctk4vskiWOKi968UUdQIVWXEzzgEoI85nOBswZAGjRyaR0bRxEclenGrFPMoyV1m4+9ncYsB5yfIvRz/VYLsc4/BkM+Qmjn+rtdmIxEfhM9TYWA8g/7PdHfYzX+7xXnMR5A4FbI1V/uKr+LPX2MWA8e+QeG3TxMeyv80avkLS3YrGx7K9PzgeyyjKB4r9Blux2kP8AzUfKmjenyNlHZjsW+GacZJe5HsspjKB4x8kK27H1vvQUv5kRV+ReInFwljnKLaupYVu9mnuqLge4yjKB4TB/2b4WMnOrKdeTbb5xJQu+EVq8bnoaGg6cElFWS2JJJIusoygV0cBH8oy9G03tjF9yLDKZygVUtDUXtpx8CKegKO2Mckt06byzi+MXufWXVhYDx75C0N1bFx7K8fOJG+QsN2Nx8eytR86Z7SwygeL/AEIa2Y/Hd9Wm/hFGZcjJOMovG4iSknFqdpKz2rcezyjKB89h/Zdg3OVSrOrVlKTk87ioXe5RS2dty4w/I7DwSUcyS2JWS8LHqspjKBRU9AU47HI6YaNitly0yjKBwxwiRJGidWUzlA51A3ykuUZQNwAAMGQBgGQBgGQBgWMgDAMgDAMgDAMgDAMgDAMgDAsZAGAZAGAZAGAZAGAZAGAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf//Z" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Medals won in 22-23 season. </p>
+            </div>
+        </div>
+      </div>
+        <div class = "the_description">
+          <p style="line-height: 2rem; margin-top: 20px;margin-left: 20px; margin-right: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque id nibh tortor id aliquet lectus proin nibh nisl. In cursus turpis massa tincidunt dui ut ornare. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum lectus. Egestas integer eget aliquet nibh praesent. Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis. Purus gravida quis blandit turpis cursus in. Tempus iaculis urna id volutpat. Lacinia quis vel eros donec ac. Tellus orci ac auctor augue. Euismod nisi porta lorem mollis aliquam ut. Phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec. Nisl tincidunt eget nullam non. Consectetur libero id faucibus nisl tincidunt eget nullam non nisi. Scelerisque purus semper eget duis. Purus sit amet luctus venenatis lectus. Consequat mauris nunc congue nisi vitae suscipit tellus. Ultricies lacus sed turpis tincidunt.
+</p> <br>
+          <p style="line-height: 2rem; margin-top: 20px;margin-left: 20px; margin-right: 20px;">  Sapien et ligula ullamcorper malesuada proin. Urna nunc id cursus metus aliquam. Imperdiet proin fermentum leo vel orci porta non pulvinar neque. Lacus viverra vitae congue eu consequat ac felis donec. Dolor magna eget est lorem ipsum dolor sit amet. Pellentesque nec nam aliquam sem et tortor consequat id. Neque sodales ut etiam sit amet nisl purus. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Risus quis varius quam quisque id diam vel quam elementum. Pretium viverra suspendisse potenti nullam ac tortor vitae purus faucibus. Massa tincidunt nunc pulvinar sapien. Aliquam sem fringilla ut morbi. Ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet. Risus at ultrices mi tempus imperdiet nulla. Fames ac turpis egestas sed tempus urna et pharetra.
+            
+            
+          </p>
+
+
+        </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body> 
+
+<footer> 
+  <img src="images/Footer_Image-removebg-preview.png" class="footer_img">
+
+  <p class="Address" style="color:white; text-decoration: underline; font-weight: bolder;"><a style="color:white;" href="https://highschool.southwindsorschools.org/"> South Windsor High School Science Olympiad</a></p>
+    <p class="Address" style="font-size: 1.35rem; font-weight: lighter; line-height: 1.7rem;"> 161 Nevers Road <br>South Windsor<br> CT 06074</p> 
+    
+    <span id="year"></span><p style="line-height: 1.5rem;padding-top:20px; color:#ffe49c; text-align: left; margin-bottom: 7px;">&copy; 2023-<script> document.write(new Date().getFullYear());
+    </script> Aditya Jha <br> <p style="line-height: 1.5rem;padding-top:0px; color:#ffe49c; text-align: left;">All Rights Reserved</p>
+</footer>
+</div>
+</html>

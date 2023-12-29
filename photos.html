@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"    
+    content="width=device-width, 
+    initial-scale=1.0">
+    <title>SWHS Science Olympiad</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+      .accordion-body {width:80vw; align-items: center; margin-right: auto;margin-left: auto;}
+      .carousel-inner {width:80vw}
+      .carousel-item img {width:80vw; height:40vw;object-fit:contain;}
+      .carousel-inner {width:80vw; height:40vw;object-fit:contain;}
+      @media (max-width:576px){.carousel-inner {width:80vw; height:70vw;object-fit:contain;}
+      .carousel-item img {width:80vw; height:70vw;object-fit:contain;}
+}
+  .accordion-item {background-image: url(https://static.vecteezy.com/system/resources/previews/013/717/509/non_2x/school-education-and-science-doodle-background-free-vector.jpg); background-size: contain;}
+    </style>
+
+</head>
+
+<div class="wrapper"> 
+
+  <nav class="navbar bg-body-tertiary fixed-top" style="padding-top:0px; padding-bottom:0px" >
+    <div class="container-fluid">
+      <img class="bobcats-logo" src="images/Bobcats_Logo_prev_ui.png" style="height:5vw; padding-top: 3px; padding-bottom:3px">
+      <a class="navbar-brand" href="index.html">     
+           South Windsor High School Science Olympiad
+        </a>
+        <a class="navbar-brand" id = "navbar-small"  href="index.html">     
+          South Windsor High School Science Olympiad
+       </a>
+      <button style = "color:#561c31;" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">SWHS Science Olympiad</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html"> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="photos.html" >Photos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sponsors.html">Sponsors</a>
+            </li>
+            <li class="nav-item dropdown">
+              <div class="embedded">
+                <a href="contact.html" target="_blank"><img width = "45px" src="data:image/png;base64,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"></a> 
+             <a href="https://www.instagram.com/swhsscioly?igsh=OGQ5ZDc2ODk2ZA==" target="_blank"><img height="36px" style="padding-left: 20px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png"></a>
+              </div>              
+
+                      </div>
+                      <div class="embed"><p id="pluh"> Latest News: </p>
+                        <embed src="images/SWHS’s Renowned Science Olympiad – The Bobcat Prowl.html" width="100%" height="300px">
+                      </div>
+      </div>
+    </div>
+  </nav>
+
+<body>
+  <div class="accordion" id="accordionExample" style = "margin-top:100px">
+    <div class="accordion-item">
+      <h2 class="accordion-header" >
+        <button style="  background-image: linear-gradient(to bottom right,#A41034, #B31B1B );
+        " class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+         <p id="labels"> Cornell University Invitational 2023 </p>
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show">
+        <div class="accordion-body">
+
+
+          <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9" aria-label="Slide 10"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10" aria-label="Slide 11"></button>
+
+
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/Cornell-2023-Images/IMG_2174.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/Cornell-2023-Images/IMG_4440.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/Cornell-2023-Images/IMG_4442.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/Cornell-2023-Images/IMG_4445.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/Cornell-2023-Images/IMG_8693.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/Cornell-2023-Images/IMG_8695.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/Cornell-2023-Images/IMG_8697.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/Cornell-2023-Images/IMG_8699.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/Cornell-2023-Images/IMG_8700.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/Cornell-2023-Images/IMG_8702.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/Cornell-2023-Images/IMG_8701.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+
+            <button id = "luh" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button id = "luh" class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>                  
+        
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body> 
+<footer> 
+  <img src="images/Footer_Image-removebg-preview.png" class="footer_img">
+
+  <p class="Address" style="color:white; text-decoration: underline; font-weight: bolder;"><a style="color:white;" href="https://highschool.southwindsorschools.org/"> South Windsor High School Science Olympiad</a></p>
+    <p class="Address" style="font-size: 1.35rem; font-weight: lighter; line-height: 1.7rem;"> 161 Nevers Road <br>South Windsor<br> CT 06074</p> 
+    
+    <span id="year"></span><p style="line-height: 1.5rem;padding-top:20px; color:#ffe49c; text-align: left; margin-bottom: 7px;">&copy; 2023-<script> document.write(new Date().getFullYear());
+    </script> Aditya Jha <br> <p style="line-height: 1.5rem;padding-top:0px; color:#ffe49c; text-align: left;">All Rights Reserved</p>
+</footer>
+</div>
+</html>
+
