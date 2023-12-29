@@ -137,7 +137,6 @@ nav a {margin-left:5px}
 @media (max-width:576px){
   .navbar-brand {display:none}
   #navbar-small {display:contents; font-size: 0.95rem;}
-  .bobcats-logo {display:none;}
 }
 
 .embedded{
