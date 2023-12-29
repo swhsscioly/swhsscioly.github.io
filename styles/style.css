@@ -44,7 +44,7 @@ nav a {margin-left:5px}
   }
 
   .image-container-homepage{
-    opacity: 1;
+    opacity: 0.9;
   }
   .image-homepage{
     opacity: 1;
@@ -89,7 +89,7 @@ nav a {margin-left:5px}
   60% {opacity:0.8;}
   70% {opacity:0.85;}
   80% {opacity:0.9;}
-  100% {opacity:1;}
+  100% {opacity: 0.9;}
 }
 
 .image-homepage{
@@ -137,6 +137,7 @@ nav a {margin-left:5px}
 @media (max-width:576px){
   .navbar-brand {display:none}
   #navbar-small {display:contents; font-size: 0.95rem;}
+  .bobcats-logo {display:none;}
 }
 
 .embedded{
