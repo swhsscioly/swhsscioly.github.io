@@ -1,0 +1,364 @@
+
+.container-fluid {background-color:#ffff75; min-height: 75px; border-radius: 3px;}
+
+.background {
+  width:100%;
+  background-color: #561c31;
+}
+ 
+footer {
+  background-color: #78495a; text-align: left; padding-left: 20px; height: 220px; color:white;
+  line-height: 2rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  margin-top:100px;
+  border-radius: 1px;
+ font-size: 1.5rem;
+ width:100%;
+}
+
+.embedded p {padding-bottom: 10px;}
+
+nav a {margin-left:5px}
+
+.image-container-homepage {
+    z-index: 1000;
+    position: relative;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 3rem;
+    width:100%;
+    background-image:url("C:\Users\Aditya Jha\Downloads\Homepage_Photo.jpg");
+    background-size:contain;
+    background-repeat: no-repeat; 
+    position:relative;
+    animation-name:theFade;
+    animation-duration:2s;
+    animation-timing-function: ease-out;
+
+  }
+
+  .image-container-homepage{
+    opacity: 0.5;
+  }
+#blud {
+  font-size: 1.75rem;
+  color:#561c31;
+  margin-bottom: 20px;
+  line-height: 0rem;
+}
+
+#blud:hover {
+  font-weight: bolder;
+  color:#ffe49c;
+}
+
+#insta {
+  width:70px;
+  margin-left: 50px;
+  text-decoration: none;
+}
+
+#insta:hover{
+  filter:blur(5px);
+}
+
+#pluh{
+  font-size: 1.6rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  margin-left: 20px;
+  padding-bottom: 10px;
+}
+
+@keyframes theFade {
+  0% {opacity:0.95;}
+  10% {opacity:0.9;}
+  20% {opacity:0.85;}
+  30% {opacity:0.8;}
+  40% {opacity:0.75;}
+  50% {opacity:0.70;}
+  60% {opacity:0.65;}
+  70% {opacity:0.6;}
+  80% {opacity:0.55;}
+  100% {opacity:0.5;}
+}
+
+.image-homepage{
+  animation-name:theFade;
+  animation-duration:2s;
+  animation-timing-function: linear;
+
+}
+  
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.the_description {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar-brand {color:#561c31; font-weight: bolder; font-size: max(2.5vw,1.2rem); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+
+.navbar-brand:hover {color:#561c31;}
+
+.navbar-brand:after {color:#561c31;}
+
+.navbar-brand:isclicked {color:#561c31;}
+
+
+.offcanvas-body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: max(1.5vw, 1.5rem);
+  line-height: 1.5rem;
+}
+
+#offcanvasNavbarLabel {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: max(1.5vw, 1.5rem);
+  font-weight: bolder;}
+
+.bobcats-logo {
+  height:5vw;
+}
+
+@media (max-width:576px){
+  footer {height:300px}
+  .navbar-brand {display:none}
+  #navbar-small {display:contents; font-size: 0.95rem;}
+}
+
+.embedded{
+  float:left;
+margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.embedded img{
+  padding-left: 7px;
+}
+
+.embedded a:hover {
+  filter: blur(5px);
+}
+
+@media (min-width:576px){
+  #navbar-small{display:none}
+}
+
+#offcanvasNavbar {
+  opacity: 0.90;
+  border-radius: 10px;}
+
+#labels {
+  color:white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.25rem;
+  font-weight: bolder;
+}
+
+#luh {
+  background-color: #B31B1B;
+  height:60px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width:60px
+}
+
+#gautam {
+  margin: 10px;
+  text-justify: auto;
+}
+
+footer .Address {
+  font-size: 1.45rem;
+  line-height: 2rem;
+  padding-top: 10px;
+}
+
+footer img {float:right; height:220px; padding-right: 20px;}
+
+.nav-link active {text-decoration: underline;
+font-weight: bolder;
+}
+
+
+nav-item {color:#561c31}
+
+nav a:hover {
+  font-weight: bolder;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+}
+50% {
+  opacity: 0.5;
+}
+75% {
+  opacity: 0.75;
+}
+  100% {
+      opacity: 1;
+   }
+}
+
+/*for Demo Only*/
+.demo-row {
+  background-color: #333;
+  padding: 50px 0;
+}
+
+
+/*Implement*/
+
+.clutch{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.card img {
+  height:10vw;
+}
+.card {
+  border: 7px solid #561c31;
+  border-radius: 15px;
+  background-color: #fffbef;
+} 
+
+.clutch p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  text-align: center;
+}
+
+#banner {
+  position:relative;
+  width: 60vw;
+  opacity:0;
+  color: #ffff75;
+   z-index: 800;  
+  font-size: 7vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 7vw;
+  font-weight: bold;
+  text-align: center;
+  animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveToRight {
+  0% {
+      transform: translateX(-1000px);
+  }
+  100% {
+      transform: translateX(0px);
+  }
+}
+
+@keyframes moveToLeft {
+  0% {
+      transform: translateX(-1000px);
+  }
+  100% {
+      transform: translateX(0px);
+  }
+}
+
+@keyframes movetoRight {
+  0% {
+      transform: translateX(1000px);
+  }
+  100% {
+      transform: translateX(0px);
+  }
+}
+
+.gautam1, .noah2 {
+  animation: movetoRight 1s ease-in-out;
+  animation-delay: 10ms;
+}
+
+.gautam2, .noah1 {
+  animation: moveToLeft 1s ease-in-out;
+  animation-delay: 10ms;
+}
+
+#jawn {
+  height: min(8vw,80px);
+  width:min(18vw,160px);
+  margin-top: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+  color:#ffff00;
+  border-color: #ffff75;
+  border-radius: 8px;
+  border-width: 3px;
+}
+
+#jawn:hover {
+  background-color: #ffff75;
+  color:#561c31;
+}
+
+
+@media (max-width:650px){
+  #jawn {font-size: min(5vw,10px);
+  }}
+
+@media (min-width:650px){
+ #jawn{ font-size: max(1.5vw,16px);
+}}
+
+@media (min-width:768){
+  #jawn{ font-size: 2vw
+ }}
+
+.sponsors{
+  display:flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+}
+/*
+@media (max-width:500px){
+  .sponsors {flex-direction: column; justify-content: center;}
+  .sponsors img {width:5vw; margin-top: 20px; margin-right: auto; margin-left: auto;}
+}*/
+
+.sponsors img {
+  width:12vw;
+}
+
+.sponsors a:hover {
+  filter: blur(6px);
+}
+
+hr {
+  border-top: 6px solid #561c31; 
+}
+
+#the_block{
+  margin-top: 40px;
+  text-align: center;
+  color:#561c31;
+  font-size: 1.8rem;
+  font-weight: bolder;
+}
+ 
