@@ -1,21 +1,10 @@
 # Security Policy
 
-## Supported Versions
-
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
-
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
-
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+If you find any vunerabilities in the website code, which can reveal sensitive information or grant unauthorized access to the website's backend on Github
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+Please report them immediately to one of our coaches, whose contact information is on the website. Visit the website, go to the contact page, and use the contact information on there to report the vunerability.
+
+You can also email us at swhsscioly.github.io to report the bug. Thanks!
+
