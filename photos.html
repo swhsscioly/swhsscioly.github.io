@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
     <style>
+      .accordion-item {background-size: contain;}
       .accordion-body {width:80vw; align-items: center; margin-right: auto;margin-left: auto;}
       .carousel-inner {width:80vw}
       .carousel-item img {width:80vw; height:40vw;object-fit:contain;}
@@ -25,7 +26,6 @@
       @media (max-width:576px){.carousel-inner {width:80vw; height:70vw;object-fit:contain;}
       .carousel-item img {width:80vw; height:70vw;object-fit:contain;}
 }
-  .accordion-item {background-image: url(https://static.vecteezy.com/system/resources/previews/013/717/509/non_2x/school-education-and-science-doodle-background-free-vector.jpg); background-size: contain;}
     </style>
 
 </head>
@@ -89,7 +89,7 @@
          <p id="labels"> Yale University Invitational 2024 </p>
         </button>
       </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
         <div class="accordion-body">
 
 
@@ -180,15 +180,15 @@
     
 
 
-    <div class="accordion-item">
+    <div class="accordion" id="accordionExample">
       <h2 class="accordion-header" >
         <button style="  background-image: linear-gradient(to bottom right,#B31B1B, #B31B1B );
         " class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
          <p id="labels"> Cornell University Invitational 2023 </p>
         </button>
       </h2>
-      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
+      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style="background-image: url(https://static.vecteezy.com/system/resources/previews/013/717/509/non_2x/school-education-and-science-doodle-background-free-vector.jpg); background-size: contain;">
+        <div class="accordion-body" >
 
 
           <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
