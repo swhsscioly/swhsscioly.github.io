@@ -393,14 +393,34 @@ h3 {
 
 /* The following is a critical security feature for the website */
 
+
 p, h3, #banner, li, a {-webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+  
   }
 
 img {
     pointer-events: none;
 }
+
+
+nav, body, #wrapper{
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+nav:focus, body:focus, #wrapper:focus {
+  outline: none !important;
+}
+
+/* The following code ensure proper function of sponsor segments */
