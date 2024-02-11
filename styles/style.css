@@ -390,3 +390,17 @@ h3 {
     display:none;
   }
 }
+
+/* The following is a critical security feature for the website */
+
+p, h3, #banner, li, a {-webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  }
+
+img {
+    pointer-events: none;
+}
