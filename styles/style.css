@@ -386,7 +386,7 @@ h3 {
 }
 
 @media (max-width:500px){
-  .O-Block{
+  O-Block{
     display:none;
   }
 }
