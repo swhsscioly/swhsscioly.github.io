@@ -422,3 +422,10 @@ nav, body, #wrapper{
 .sponsors img {
   pointer-events: all;
 }
+
+/*
+@media (max-width:500px){
+  .sponsors {display:flex; flex-direction:column-reverse;}
+  .sponsors img {margin-right: auto; margin-left: auto; float: right; width:25vw; padding-bottom: 10px;}
+  .s1, .s2 { justify-content: center; align-items: center; margin-right: auto; margin-left: auto;}
+} */
