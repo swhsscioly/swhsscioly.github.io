@@ -419,8 +419,6 @@ nav, body, #wrapper{
 
 }
 
-nav:focus, body:focus, #wrapper:focus {
-  outline: none !important;
+.sponsors img {
+  pointer-events: all;
 }
-
-/* The following code ensure proper function of sponsor segments */
