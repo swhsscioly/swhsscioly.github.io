@@ -376,8 +376,6 @@ hr {
   margin-top: -150px;
 }
 
-
- 
 h3 {
   text-decoration: underline;
   font-weight: bolder;
@@ -385,4 +383,10 @@ h3 {
   font-size: 1.9rem;
   padding-bottom: 20px;
   text-align: center;
+}
+
+@media (max-width:500px){
+  .O-Block{
+    display:none;
+  }
 }
