@@ -270,7 +270,7 @@ nav a:hover {
 }
 
 @media (max-width:576px){
-  banner{font-size: 5vw; line-height: 5vw;  padding-top: 50px;
+  banner{font-size: 5vw; line-height: 5vw;  padding-top: 60px;
   }
 }
 
@@ -313,7 +313,7 @@ nav a:hover {
 
 @media (max-width:635px){
 #jawn {display:none;}
-#banner {padding-top: 20px;}
+#banner {padding-top: 30px;}
 }
 
 #jawn {
