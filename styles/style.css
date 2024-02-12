@@ -201,6 +201,10 @@ footer img {float:right; height:220px; padding-right: 20px;}
 font-weight: bolder;
 }
 
+@media (min-width:1000px){
+  nav-link{padding-bottom: 10px;}
+}
+
 
 nav-item {color:#561c31}
 
