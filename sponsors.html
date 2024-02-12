@@ -109,6 +109,14 @@ nav a {text-align: left;}
           document.getElementById("c").innerHTML="<p id='banner' > Connecticut's Science Olympiad champion for 2 years in a row</p><button type='button' id='jawn' onclick='window.scroll(1000,600)' style=' margin-top: 50px font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bolder' class='btn btn-outline-dark'>Read More</button>";}
         </script>
 
+          <script>
+            window.onload = function()
+              {
+                  document.getElementById('banner').scrollIntoView();
+              };
+
+          </script>
+
         <script>
           if(document.getElementById("jawn").clicked==true){
             window.scroll(1000,600);
