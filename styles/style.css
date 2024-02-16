@@ -16,6 +16,10 @@
 
 .accordion-button {border-radius: 8px;}
  
+footer .embedded, footer .embedded-footer {
+  visibility: hidden;
+}
+
 footer {
   background-color: #78495a; text-align: left; padding-left: 20px; color:white;
   line-height: 2rem;
@@ -25,6 +29,11 @@ footer {
   border-radius: 1px;
  font-size: 1.5rem;
  width:100%;
+}
+
+footer .embedded img{
+  height:30px;
+  
 }
 
 .embedded p {padding-bottom: 10px;}
