@@ -1,3 +1,7 @@
+.big-container {
+  display:flex; flex-direction: row; justify-content:space-evenly;
+}
+
 
 .container-fluid {background-color:#ffff75; min-height: 75px; border-radius: 3px;}
 
