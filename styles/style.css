@@ -2,6 +2,9 @@
   display:flex; flex-direction: row; justify-content:space-evenly;
 }
 
+#offcanvasNavbarLabel {
+  color:#561c31
+}
 
 .container-fluid {background-color:#ffff75; min-height: 75px; border-radius: 3px;}
 
@@ -155,7 +158,6 @@ nav a {margin-left:5px}
   #navbar-small {display:contents; font-size: 0.90rem;}
   .bobcats-logo {display:none;}
   .gautam1, .gautam2 {text-align: center;}
-
 }
 
 .embedded{
