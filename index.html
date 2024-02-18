@@ -107,38 +107,39 @@
     </div>
   </nav>
 <body >
+  <script>
+    var viewportWidth  = document.documentElement.clientWidth*0.50984308130;
+    document.getElementsByClassName("image-container-homepage")[0].style.height=viewportWidth;
+  </script>
+    <div class="background">
+
+  <div class="image-container-homepage">
+    <div class = "centered" id="c">
+      <script>
+        setTimeout(main, 1900);
+        function main(){
+        document.getElementById("c").innerHTML="<p id='banner' > Connecticut's Science Olympiad champion for 2 years in a row</p><button type='button' id='jawn' onclick='window.scroll(1000,600)' style=' margin-top: 50px font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bolder' class='btn btn-outline-dark'>Read More</button>";}
+      </script>
+
         <script>
-          var viewportWidth  = document.documentElement.clientWidth*0.50984308130;
-          document.getElementsByClassName("image-container-homepage")[0].style.height=viewportWidth;
+          window.onload = function()
+            {
+                document.getElementById('banner').scrollIntoView();
+            };
+
         </script>
-          <div class="background">
 
-        <div class="image-container-homepage">
-          <div class = "centered" id="c">
-            <script>
-              setTimeout(main, 1500);
-              function main(){
-              document.getElementById("c").innerHTML="<p id='banner' > Connecticut's Science Olympiad champion for 2 years in a row</p><button type='button' id='jawn' onclick='window.scroll(1000,625)' style=' margin-top: 50px font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bolder' class='btn btn-outline-dark'>Read More</button>";}
-            </script>
+      <script>
+        if(document.getElementById("jawn").clicked==true){
+          window.scroll(1000,550);
+        }
+      </script>
 
-            <script>
-              window.onload = function()
-                {
-                    document.getElementById('banner').scrollIntoView();
-                };
+    </div>
+    <img class = "image-homepage" src="images/Homepage_Photo.jpg" alt = "SWHS Scioly Team at Cornell" width = "100%" style="padding-top: 70px; ">          
+    </div>
+      </div>       
 
-            </script>
-
-            <script>
-              if(document.getElementById("jawn").clicked==true){
-                window.scroll(1000,550);
-              }
-            </script>
-
-          </div>
-          <img class = "image-homepage" src="images/Homepage_Photo.jpg" alt = "SWHS Scioly Team at Cornell" width = "100%" style="padding-top: 70px; ">
-          </div>
-            </div>
         <div style="min-height: 630px;" class = "the_description">
           <img class = "noah1" src="images/Past Images/2018 MIT.jpg" style="width:25vw; min-width:300px; max-width: 400px; margin-bottom: 20px; margin-left: 20px; margin-top: 20px; border-radius: 8px; float:right; " >
             <h3 style="padding-top: 10px;" class="gautam1">Who Are We</h3>
