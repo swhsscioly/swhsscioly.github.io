@@ -1,8 +1,17 @@
-This is the official website of the South Windsor High School Science Olympiad. This website has a description of our team, team photos, and contact information. This website was created by @adityajha25 (member of our Science Olympiad team). Please contact him if you have any questions or woul like to contribute to our website. 
+# South Windsor High School Science Olympiad Website
 
-The majority of the website is in HTML and CSS. There is some minor JavaScript here and there. The website is currently hosted on Github Pages.
+Welcome to the official website of the South Windsor High School Science Olympiad team!
 
-This is the version of the website which is hosted on Github Pages under the subdomain: swhsscioly.github.io
+## About
+Our website features a description of our team, team photos, and contact information to keep you updated on our activities and events.
 
+## Creator
+This website was created by @adityajha25, a dedicated member of our Science Olympiad team. Feel free to reach out to him if you have any questions or would like to contribute to our website.
 
-Visit https://swhsscioly.github.io/index.html
+## Technology
+The majority of the website is built using HTML and CSS, with some minor JavaScript elements incorporated for enhanced functionality.
+
+## Hosting
+The website is currently hosted on Github Pages under the subdomain: [swhsscioly.github.io](https://swhsscioly.github.io/index.html)
+
+Visit our website to explore more about our team and stay connected with us! 🚀🔬🌟
