@@ -3,6 +3,14 @@
   display:flex; flex-direction: row; justify-content:space-evenly;
 }
 
+#deuce-deuce{text-align: center; padding-top: 5px;}
+
+@media (min-width:576px){
+  #deuce-deuce{display:none}
+
+  #nithik {padding-top:10px}
+}
+
 #offcanvasNavbarLabel {
   color:#561c31
 }
