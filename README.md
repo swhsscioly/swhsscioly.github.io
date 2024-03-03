@@ -1,4 +1,4 @@
-# South Windsor High School Science Olympiad Website
+# South Windsor High School Science Olympiad
 
 Welcome to the official website of the South Windsor High School Science Olympiad team! We are proud to have clinched victory at the Connecticut State Science Olympiad tournament an impressive three times, showcasing our dedication, teamwork, and passion for science.
 
