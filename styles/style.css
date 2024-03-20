@@ -395,7 +395,7 @@ html {width:100%;}
 }*/
 
 .sponsors img {
-  width:20vw;
+  width:15vw;
 }
 
 .sponsors a:hover {
@@ -472,4 +472,12 @@ nav, body, #wrapper{
   .sponsors img{width:100%; margin-left: auto; margin-right: auto;}
   .sponsors {display:flex; flex-direction: column; margin-left: auto; margin-right: auto;}
   .s1 {width:35vw; margin-left: auto; margin-right: auto;}
+}
+
+#parkway-gardens:hover {
+  color:#ffe49c
+}
+
+#parkway-gardens {
+  text-decoration: underline;
 }
