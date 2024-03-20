@@ -395,7 +395,7 @@ html {width:100%;}
 }*/
 
 .sponsors img {
-  width:12vw;
+  width:15vw;
 }
 
 .sponsors a:hover {
@@ -467,3 +467,7 @@ nav, body, #wrapper{
   .sponsors img {margin-right: auto; margin-left: auto; float: right; width:25vw; padding-bottom: 10px;}
   .s1, .s2 { justify-content: center; align-items: center; margin-right: auto; margin-left: auto;}
 } */
+
+@media (max-width:576px){
+  .sponsors img{width:30vw;}
+}
