@@ -204,10 +204,19 @@ margin-top: 20px;
 
 #luh {
   background-color: #B31B1B;
-  height:60px;
+  height:9vw;
   margin-top: auto;
   margin-bottom: auto;
-  width:60px
+  width:9vw
+}
+
+@media (min-width:700px){
+  #luh {
+    height:6vw;
+    margin-top: auto;
+    margin-bottom: auto;
+    width:6vw
+  }
 }
 
 #gautam {
