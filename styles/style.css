@@ -17,6 +17,10 @@ strong {font-weight: bolder; color:#561c31}
   color:#561c31
 }
 
+.nav-item{
+  font-weight: 600;
+}
+
 .container-fluid {background-color:#ffff75; min-height: 75px; border-radius: 3px;}
 
 .background {
@@ -245,6 +249,7 @@ nav-item {color:#561c31}
 
 nav a:hover {
   font-weight: bolder;
+  color:#ffff00;
 }
 
 @keyframes fadeInAnimation {
