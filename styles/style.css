@@ -476,6 +476,7 @@ nav, body, #wrapper{
 
 /* Media query for mobile site */
 @media (max-width:576px){
+  #mabu {display:none}
   .sponsors img{width:100%; margin-left: auto; margin-right: auto;}
   .sponsors {display:flex; flex-direction: column-reverse; margin-left: auto; margin-right: auto;}
   .s1 {width:30vw; margin-left: auto; margin-right: auto;}
