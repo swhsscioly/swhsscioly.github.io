@@ -397,20 +397,12 @@ html {width:100%;}
   #jawn{ font-size: 5vw
  }}
 
-.sponsors{
-  display:flex;
-  flex-direction: row-reverse;
-  justify-content: space-evenly;
-}
 /*
 @media (max-width:500px){
   .sponsors {flex-direction: column; justify-content: center;}
   .sponsors img {width:5vw; margin-top: 20px; margin-right: auto; margin-left: auto;}
 }*/
 
-.sponsors img {
-  width:15vw;
-}
 
 .sponsors a:hover {
   filter: blur(6px);
@@ -482,10 +474,31 @@ nav, body, #wrapper{
   .s1, .s2 { justify-content: center; align-items: center; margin-right: auto; margin-left: auto;}
 } */
 
+/* Media query for mobile site */
 @media (max-width:576px){
+  #mabu {display:none}
   .sponsors img{width:100%; margin-left: auto; margin-right: auto;}
-  .sponsors {display:flex; flex-direction: column; margin-left: auto; margin-right: auto;}
-  .s1 {width:35vw; margin-left: auto; margin-right: auto;}
+  .sponsors {display:flex; flex-direction: column-reverse; margin-left: auto; margin-right: auto;}
+  .s1 {width:30vw; margin-left: auto; margin-right: auto;}
+  #newberry {width:27vw; max-width: 150px; margin-right: auto; margin-left: auto;}
+
+}
+
+/* Media query for desktop site */
+@media (min-width:576px){
+  .sponsors{
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+  }
+  .sponsors img {
+    width:15vw;
+    max-width:200px;
+  }
+
+  #newberry {width:10vw; max-width: 150px;}
+  
+  #knock {display:none}
 }
 
 #parkway-gardens:hover {
@@ -496,3 +509,6 @@ nav, body, #wrapper{
   text-decoration: underline;
 }
 
+@media (min-width:1920px){
+  .the_description{margin-top: 40px;}
+}
