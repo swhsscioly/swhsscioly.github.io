@@ -483,6 +483,7 @@ nav, body, #wrapper{
   .s1 {width:30vw; margin-left: auto; margin-right: auto;}
   #newberry {width:27vw; max-width: 150px; margin-right: auto; margin-left: auto;}
   .sponsors {display:none}
+  #the_block{ font-size: 2rem;}
 
 }
 
@@ -503,6 +504,9 @@ nav, body, #wrapper{
   #newberry {width:11vw; max-width: 150px;}
   
   #knock {display:none}
+
+  #the_block{ font-size: 1.5rem;}
+
 }
 
 #parkway-gardens:hover {
@@ -518,5 +522,13 @@ nav, body, #wrapper{
 }
 
 /*Slideshow controls */
-.slideshow {width:80%; margin-right: auto; margin-left: auto; height:20vw}
-.slideshow img{max-height: 20vw; object-fit: contain;}
+.slideshow {width:100%; margin-right: auto; margin-left: auto; height:17vw}
+.slideshow img{
+  max-height: 17vw; max-width:80% ;object-fit: contain; margin-left: auto; 
+  margin-right: auto; margin-top: auto; margin-bottom: auto;
+}
+
+#chiefkeef:hover {
+  background-color: #561c31;
+  width:7vw;
+}
