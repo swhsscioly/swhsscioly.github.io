@@ -524,7 +524,7 @@ nav, body, #wrapper{
 /*Slideshow controls */
 .slideshow {width:100%; margin-right: auto; margin-left: auto; height:17vw}
 .slideshow img{
-  max-height: 17vw; max-width:80% ;object-fit: contain; margin-left: auto; 
+  max-height: 17vw; max-width:70% ;object-fit: contain; margin-left: auto; 
   margin-right: auto; margin-top: auto; margin-bottom: auto;
 }
 
