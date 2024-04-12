@@ -487,27 +487,33 @@ nav, body, #wrapper{
 
 }
 
+
 /* Media query for desktop site */
 @media (min-width:576px){
+  .slideshow{display:none}
   .sponsors{
     display:flex;
     flex-direction: row-reverse;
     justify-content: space-evenly;
   }
-  .slideshow{display:none}
 
-  .sponsors img {
-    width:15vw;
-    max-width:200px;
+  .sponsors img{width:auto; height: auto; object-fit: contain;
+     margin-left: auto; margin-right: auto; display:block;
+     margin-top: auto; margin-bottom: auto;
+
+     /* Center image vertically */
+    height:100%; 
+    max-height: 200px;
+    }
+
+    #newberry {width:60%}
+    
+  .s1{width:50%; height: 9vw;
   }
 
-  #newberry {width:11vw; max-width: 150px;}
-  
   #knock {display:none}
-
-  #the_block{ font-size: 1.5rem;}
-
 }
+
 
 #parkway-gardens:hover {
   color:#ffe49c
@@ -517,7 +523,7 @@ nav, body, #wrapper{
   text-decoration: underline;
 }
 
-@media (min-width:1920px){
+@media (min-width:1372){
   .the_description{margin-top: 40px;}
 }
 
