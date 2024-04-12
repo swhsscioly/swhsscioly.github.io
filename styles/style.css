@@ -143,7 +143,6 @@ nav a {margin-left:5px}
 .the_description {
     padding-left: 20px;
     padding-right: 20px;
-    min-height:630px;
 }
 
 .navbar-brand {color:#561c31; font-weight: bolder; font-size: max(2.5vw,1.2rem); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
@@ -410,7 +409,7 @@ html {width:100%;}
 }
 
 hr {
-  border-top: 6px solid #561c31; 
+  border-top: 8px solid #561c31; 
 }
 
 #the_block{
@@ -484,6 +483,7 @@ nav, body, #wrapper{
   #newberry {width:27vw; max-width: 150px; margin-right: auto; margin-left: auto;}
   .sponsors {display:none}
   #the_block{ font-size: 2rem;}
+  #flick {display:none}
 
 }
 
@@ -528,7 +528,7 @@ nav, body, #wrapper{
   margin-right: auto; margin-top: auto; margin-bottom: auto;
 }
 
-#chiefkeef:hover {
+#chiefkeef {
   background-color: #561c31;
-  width:9vw;
+  width:7vw;
 }
