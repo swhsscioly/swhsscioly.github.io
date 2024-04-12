@@ -18,6 +18,15 @@
     <link rel="icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" href="images/favicon.ico">
 <style>
+.carousel-control-prev-icon {
+ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23561c31' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23561c31' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+
       @keyframes moveToLeft {
   0% {
       transform: translateX(-1000px);
@@ -114,8 +123,8 @@ nav a {text-align: left;}
       <li style="  margin-left: 30px;list-style-type: circle;"><strong>Included </strong>in our communications with parents and families</li>
 
       <p style="padding-top: 30px;">Prospective sponsors should use the information on the <a href="contact.html">contact page</a> to get in touch with us. You can also reach out to us on <a href="https://www.instagram.com/swhsscioly/">Instagram</a>.</p>
-      <li style="  margin-left: 30px; padding-top: 30px; font-weight: bolder; font-size: 1.7rem;">We look forward to working with you!</li>
-    </ol><br>   <br> <p id="the_block" style="font-size: 2rem; margin-top: 0px;">Thank you to our current sponsors</p>
+      <li style="  margin-left: 30px; padding-top: 30px; font-weight: bolder; ">We look forward to working with you!</li>
+    </ol><br> <br id="flick"> <p id="the_block" style="font-size: 2rem; margin-top: 0px;">Thank you to our current sponsors</p>
              
           </div>
           <hr>                
@@ -136,7 +145,27 @@ nav a {text-align: left;}
                 <a target="_blank" href="https://statepatrol.dps.mo.gov/"> <img style="width:8vw" src="images/Icons/Missouri_Highway_Patrol.jpg" ></a>
                </div>-->
 
-          </div>          <hr>
+          </div>            <div class="slideshow">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+              <div class="carousel-inner">
+                <div class="carousel-item active" >
+                 <a href="https://newberryagency.com/"  target="_blank"> <img src="images/Icons/newberry_mobile.png" class="d-block w-100" alt="..."></a>
+                </div>
+                <div class="carousel-item">
+              <a href="https://www.randyswoosterstreetpizzamenu.com/" target="_blank">   <img src="images/Icons/randys.png" class="d-block w-100" alt="..."></a> 
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        <hr>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body> 
 

@@ -19,6 +19,15 @@
     <link rel="apple-touch-icon" href="images/favicon.ico">
     <meta http-equiv="X-Frame-Options" content="deny">  
     <style>
+
+.carousel-control-prev-icon {
+ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23561c31' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23561c31' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
 @media (max-width:1660px){
   #the_block{
     margin-top: 20px;
@@ -151,7 +160,7 @@
             We push our intellectual limits in the pursuit of knowledge and joy. Throughout the years, we have won numerous tournaments due to the hard work of our team. Recently, our team has won the Connecticut State Science Olympiad tournament two years in a row and has appeared at the national tournament. <O-Block> Our success is a direct result of the work every team member puts in everyday after school. We have also crafted a nationwide alumni network of scientists and engineers who advance the frontiers of science and technology everyday.</O-Block>
           </p>
           <br>
-          <div class = "the_description" style="min-height: 630px;">
+          <div class = "the_description" style="min-height: 580px;">
             <img class = "noah1" src="images/Past Images/2017 States.jpg" style="width:25vw; min-width:300px; max-width: 400px;margin-right: 20px; margin-bottom: 20px; margin-left: 20px; margin-top: 20px; border-radius: 8px; float:right; " >
               <h3 style="padding-top: 10px;" class="gautam1">Achievements</h3>
             <p style=" text-justify: inter-word;" class="gautam1">
@@ -162,7 +171,6 @@
             <h3 class="noah1">States 2022</h3> <p class="gautam2">
             Our team has won the CT State Science Olympiad tournament for the past two years in a row. We are working to win states again this year and in consecutive years. <O-Block>In order to improve, our team competed in and won a medal at the Cornell University Science Olympiad tournament as early as in November of 2023.</O-Block>
           </p>
-<br>
 
         </div>
         <script>
@@ -194,7 +202,7 @@
         </script>
         </div>
         
-        <p id="the_block" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 2rem; text-align:center; margin-left: 20px;">Thank you to our current sponsors</p>
+        <p id="the_block" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align:center; margin-left: 20px;">Thank you to our current sponsors</p>
           <hr>
           <div class="sponsors">
             <div class="s1">
@@ -214,9 +222,28 @@
                </div>
               -->
           </div>
+          <div class="slideshow">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+              <div class="carousel-inner">
+                <div class="carousel-item active" >
+                 <a href="https://newberryagency.com/"  target="_blank"> <img src="images/Icons/newberry_mobile.png" class="d-block w-100" alt="..."></a>
+                </div>
+                <div class="carousel-item">
+              <a href="https://www.randyswoosterstreetpizzamenu.com/" target="_blank">   <img src="images/Icons/randys.png" class="d-block w-100" alt="..."></a> 
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
           <hr>
   </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
