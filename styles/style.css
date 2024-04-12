@@ -18,7 +18,7 @@ strong {font-weight: bolder; color:#561c31}
 }
 
 .nav-item{
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .container-fluid {background-color:#ffff75; min-height: 75px; border-radius: 3px;}
@@ -248,7 +248,7 @@ font-weight: bolder;
 nav-item {color:#561c31}
 
 nav a:hover {
-  font-weight: bolder;
+  font-weight: 800;
   color:#ffff00;
 }
 
