@@ -516,3 +516,7 @@ nav, body, #wrapper{
 @media (min-width:1920px){
   .the_description{margin-top: 40px;}
 }
+
+/*Slideshow controls */
+.slideshow {width:80%; margin-right: auto; margin-left: auto; height:20vw}
+.slideshow img{max-height: 20vw; object-fit: contain;}
