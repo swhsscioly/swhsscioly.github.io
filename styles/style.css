@@ -9,9 +9,6 @@ strong {font-weight: bolder; color:maroon}
 
 #deuce-deuce{text-align: center; padding-top: 5px;}
 
-#brotha {color:maroon}
-
-#them_boys {background-color: #fffbf1;}
 
 @media (min-width:576px){
   #deuce-deuce{display:none}
