@@ -3,7 +3,9 @@
   display:flex; flex-direction: row; justify-content:space-evenly;
 }
 
-strong {font-weight: bolder; color:#561c31}
+strong {font-weight: bolder; color:maroon}
+
+.ooter-blitz, .ooter-blitz li {line-height: 2.5rem;}
 
 #deuce-deuce{text-align: center; padding-top: 5px;}
 
@@ -13,7 +15,7 @@ strong {font-weight: bolder; color:#561c31}
   #nithik {padding-top:10px}
 }
 
-#wsg {font-weight: 650; color:black; text-decoration: underline;}
+#wsg {font-weight: 650; color:purple; text-decoration: none;}
 
 #offcanvasNavbarLabel {
   color:#561c31
@@ -527,6 +529,6 @@ nav, body, #wrapper{
 /*Slideshow controls */
 .slideshow {width:100%; margin-right: auto; margin-left: auto; height:17vw}
 .slideshow img{
-  max-height: 17vw; max-width:70% ;object-fit: contain; margin-left: auto; 
+  height: 17vw; max-width:70% ;object-fit: contain; margin-left: auto; 
   margin-right: auto; margin-top: auto; margin-bottom: auto;
 }
