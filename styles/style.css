@@ -70,7 +70,7 @@ nav a {margin-left:5px}
     color: white;
     font-weight: bold;
     font-size: 3rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, sans-serif;
     line-height: 3rem;
     width:100%;
     background-size:contain;
@@ -196,6 +196,30 @@ margin-top: 20px;
   filter: blur(5px);
 }
 
+.pt-serif-regular {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pt-serif-bold {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.pt-serif-regular-italic {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.pt-serif-bold-italic {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
 @media (min-width:576px){
   #navbar-small{display:none}
 }
@@ -304,13 +328,13 @@ nav a:hover {
 
 #banner {
   position:relative;
-  width: 60vw;
+  width: 70vw;
   opacity:0;
   color: #ffffff;
    z-index: 800;  
   font-size: 7vw;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 7vw;
+  line-height: 8.5vw;
   font-weight: bold;
   text-align: center;
   animation: fadeInAnimation ease 1s;
@@ -507,9 +531,10 @@ nav, body, #wrapper{
     max-height: 200px;
     }
 
-    #newberry {width:60%}
+    #newberry {width:85%;}
+    #rotary {width:73%}
     
-  .s1{width:50%; height: 9vw;
+  .s1{width:33.3%; height: 9vw;
   }
 
   #knock {display:none}
