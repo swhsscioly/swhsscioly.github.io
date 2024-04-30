@@ -507,9 +507,10 @@ nav, body, #wrapper{
     max-height: 200px;
     }
 
-    #newberry {width:60%}
+    #newberry {width:80%;}
+    #rotary {width:100%;}
     
-  .s1{width:50%; height: 9vw;
+  .s1{width:33.3%; height: 9vw;
   }
 
   #knock {display:none}
