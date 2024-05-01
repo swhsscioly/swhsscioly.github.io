@@ -334,7 +334,7 @@ nav a:hover {
    z-index: 800;  
   font-size: 7vw;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 8.5vw;
+  line-height: 7vw;
   font-weight: bold;
   text-align: center;
   animation: fadeInAnimation ease 1s;
@@ -531,7 +531,7 @@ nav, body, #wrapper{
     max-height: 200px;
     }
 
-    #newberry {width:85%;}
+    #newberry {width:90%;}
     #rotary {width:73%}
     
   .s1{width:33.3%; height: 9vw;
