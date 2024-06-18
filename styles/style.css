@@ -347,6 +347,16 @@ nav a:hover {
 .card img {
   height:10vw;
 }
+
+.chiefsosa{
+  text-align: center;
+  font-size: 0.9rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+
 .card {
   border: 7px solid #561c31;
   border-radius: 15px;
@@ -452,6 +462,8 @@ html {width:100%;}
 @media (max-width:635){
   #jawn{font-size: 2vw;}
 }
+
+
 @media (min-width:768){
   #jawn{ font-size: 3vw
  }}
@@ -554,6 +566,7 @@ nav, body, #wrapper{
     display:flex;
     flex-direction: row-reverse;
     justify-content: space-evenly;
+    height:fit-content;
   }
 
   .sponsors img{width:auto; height: auto; object-fit: contain;
@@ -575,7 +588,7 @@ nav, body, #wrapper{
   #knock {display:none}
 }
 
-
+;
 #parkway-gardens:hover {
   color:#ffe49c
 }
