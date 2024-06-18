@@ -9,6 +9,23 @@
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+@media (min-width:1080px){
+  .accordion-body {  
+    display:flex;
+    flex-direction: row;
+  }
+
+  .accordion-body ul {width:65%;}
+  #boeing {width:35%; max-height: 100px;}
+  #boeing img {margin-left: auto; margin-right: auto;}
+}
+
+@media (max-width:1080px){
+  #boeing {display:none}
+  .accordion-body ul {width:95%;}
+
+}
+
 #bussitdown{
   font-size: 1.4rem;
   font-weight: bolder;
