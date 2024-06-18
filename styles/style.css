@@ -13,9 +13,11 @@
   font-size: 1.4rem;
   font-weight: bolder;
   color:white;
-  background-color: maroon;
-  border-radius: 25px;
+  border-radius: 20px;
+}
 
+.accordion-item{
+  margin-top: 15px;
 }
 
 strong {font-weight: bolder; color:maroon}
