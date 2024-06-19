@@ -542,6 +542,16 @@ nav, body, #wrapper{
   pointer-events: all;
 }
 
+.sponsor_descriptions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.d1 {
+  width:28%;
+}
+
 /*
 @media (max-width:500px){
   .sponsors {display:flex; flex-direction:column-reverse;}
