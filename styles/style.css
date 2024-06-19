@@ -546,10 +546,17 @@ nav, body, #wrapper{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  margin-top: 25px;
 }
 
 .d1 {
   width:28%;
+  font-size: 1.1rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  line-height: 1.2rem;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /*
@@ -563,6 +570,7 @@ nav, body, #wrapper{
 @media (max-width:576px){
   #mabu {display:none}
   .sponsors {display:none}
+  .sponsor_descriptions{display:none;}
   #the_block{ font-size: 2rem;}
   #flick {display:none}
   #mockingbird {display:none}
