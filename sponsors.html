@@ -21,6 +21,40 @@
     <link rel="apple-touch-icon" href="images/favicon.ico">
 <style>
 
+.accordion-body {
+  line-height: 2rem;
+  font-size: 1.4rem;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+@media (min-width:1080px){
+  .accordion-body {  
+    display:flex;
+    flex-direction: row;
+  }
+
+  .accordion-body ul {width:65%;}
+  #boeing {width:35%; max-height: 100px;}
+  #boeing img {margin-left: auto; margin-right: auto;}
+}
+
+@media (max-width:1080px){
+  #boeing {display:none}
+  .accordion-body ul {width:95%;}
+
+}
+
+#bussitdown{
+  font-size: 1.4rem;
+  font-weight: bolder;
+  color:white;
+  border-radius: 20px;
+}
+
+.accordion-item{
+  margin-top: 15px;
+}
+
   ul {list-style-type: circle;}
 
 .carousel-control-prev-icon {
@@ -223,7 +257,7 @@ nav a {text-align: left;}
                 <a target="_blank" href="https://portal.clubrunner.ca/6674"> <img src="images/Icons/rotary.png" id="rotary"></a>
                </div>
           </div>
-          <hr style="border-color: gray;">
+          <hr style="border-color: gray;" id="shooter">
           <div class="sponsor_descriptions">
             <div class="d1">
               <p style="color:#2e6faa">SW Rotary Club is a service organization. They raise money and use it for the benefit of the residents of South Windsor and support international projects. Rotary International has also been a primary funding agency for the eradication of polio. Contact them at: <a style="font-weight: normal;" href="https://portal.clubrunner.ca/6674" target="_blank"> rotarysw.org</a>
