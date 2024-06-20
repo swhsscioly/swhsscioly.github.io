@@ -50,6 +50,21 @@
   }
 }
 
+.slideshown {width:100%; margin-right: auto; margin-left: auto; height:17vw}
+.slideshown img{
+  height: 17vw; max-width:70% ;object-fit: contain; margin-left: auto; 
+  margin-right: auto; margin-top: auto; margin-bottom: auto;
+}
+
+@media (min-width:600px){
+  .slideshown {width:100%; margin-right: auto; margin-left: auto; height:10vw}
+.slideshown img{
+  height: 10vw; max-width:500px ;object-fit: contain; margin-left: auto; 
+  margin-right: auto; margin-top: auto; margin-bottom: auto;
+}
+}
+
+
 @keyframes movetoRight {
   0% {
       transform: translateX(1000px);
@@ -213,7 +228,7 @@
         </div>
         
           <hr>
-          <div class="sponsors">
+          <div class="sponsors" style="display:none">
             <div class="s1">
              <a target="_blank" href="https://www.randyswoosterstreetpizzamenu.com/"> <img src="images/Icons/randys.png" id="randys"></a>
             </div>  <br id="knock"><br id="knock">
@@ -231,8 +246,8 @@
                </div>
               -->
           </div>
-          <div class="slideshow">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+          <div class="slideshown">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
               <div class="carousel-inner">
                 <div class="carousel-item active" >
                  <a href="https://newberryagency.com/"  target="_blank"> <img src="images/Icons/newberry_mobile.png" class="d-block w-100" alt="..."></a>
