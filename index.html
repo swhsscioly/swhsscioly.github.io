@@ -50,6 +50,21 @@
   }
 }
 
+.slideshown {width:100%; margin-right: auto; margin-left: auto; height:17vw}
+.slideshown img{
+  height: 17vw; max-width:70% ;object-fit: contain; margin-left: auto; 
+  margin-right: auto; margin-top: auto; margin-bottom: auto;
+}
+
+@media (min-width:600px){
+  .slideshown {width:100%; margin-right: auto; margin-left: auto; height:10vw}
+.slideshown img{
+  height: 10vw; max-width:500px ;object-fit: contain; margin-left: auto; 
+  margin-right: auto; margin-top: auto; margin-bottom: auto;
+}
+}
+
+
 @keyframes movetoRight {
   0% {
       transform: translateX(1000px);
@@ -213,7 +228,7 @@
         </div>
         
           <hr>
-          <div class="sponsors">
+          <div class="sponsors" style="display:none">
             <div class="s1">
              <a target="_blank" href="https://www.randyswoosterstreetpizzamenu.com/"> <img src="images/Icons/randys.png" id="randys"></a>
             </div>  <br id="knock"><br id="knock">
@@ -231,19 +246,28 @@
                </div>
               -->
           </div>
-          <div class="slideshow">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+          <div class="slideshown">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
               <div class="carousel-inner">
                 <div class="carousel-item active" >
                  <a href="https://newberryagency.com/"  target="_blank"> <img src="images/Icons/newberry_mobile.png" class="d-block w-100" alt="..."></a>
                 </div>
+                <div class="carousel-item">
+                  <a href="https://www.lasallefamilydental.com/" target="_blank">   <img src="images/Icons/lasalle_dentistry.png" class="d-block w-100" alt="..."></a> 
+                    </div>
+
                 <div class="carousel-item">
               <a href="https://www.randyswoosterstreetpizzamenu.com/" target="_blank">   <img src="images/Icons/randys.png" class="d-block w-100" alt="..."></a> 
                 </div>
                 <div class="carousel-item">
                   <a href="https://portal.clubrunner.ca/6674/" target="_blank">   <img src="images/Icons/rotary.png" class="d-block w-100" alt="..."></a> 
                     </div>
-    
+                    <div class="carousel-item">
+                      <a href="https://www.dairyqueen.com/en-us/" target="_blank">   <img src="images/Icons/dairy queen.jpeg" class="d-block w-100" alt="..."></a> 
+                        </div>
+                        <div class="carousel-item">
+                          <a href="https://www.subway.com/en-us" target="_blank">   <img src="images/Icons/subway.png" class="d-block w-100" alt="..."></a> 
+                            </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
