@@ -148,6 +148,7 @@ nav a {margin-left:5px}
 .the_description {
     padding-left: 20px;
     padding-right: 20px;
+    text-align: justify;
 }
 
 .navbar-brand {color:#561c31; font-weight: bolder; font-size: max(2.5vw,1.2rem); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
@@ -592,3 +593,4 @@ nav, body, #wrapper{
   height: 17vw; max-width:70% ;object-fit: contain; margin-left: auto; 
   margin-right: auto; margin-top: auto; margin-bottom: auto;
 }
+
