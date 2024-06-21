@@ -148,6 +148,7 @@ nav a {margin-left:5px}
 .the_description {
     padding-left: 20px;
     padding-right: 20px;
+    text-align: justify;
 }
 
 .navbar-brand {color:#561c31; font-weight: bolder; font-size: max(2.5vw,1.2rem); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
@@ -583,7 +584,7 @@ nav, body, #wrapper{
 }
 
 @media (min-width:1372){
-  .the_description{margin-top: 40px;}
+  .the_description{margin-top: 40px; text-align: justify;}
 }
 
 /*Slideshow controls */
@@ -594,13 +595,13 @@ nav, body, #wrapper{
 }
 
 #group-photo{
-  width:55%;
+  width:60%;
   border-radius: 20px;
 }
 
 #gangster {
   text-align: justify;
-  width:90%;
+  width:85%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -635,4 +636,8 @@ table {
 thead{
   font-weight: bolder;
   color:#561c31;
+}
+
+@media (max-width:1660px){
+  #coolah {display:none;}
 }
