@@ -622,12 +622,3 @@ nav, body, #wrapper{
 #bylaws:hover {
   color:gold;
 }
-
-.table {
-  width:75%;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 1.2rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  line-height: 0.1rem;
-}
