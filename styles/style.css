@@ -592,3 +592,42 @@ nav, body, #wrapper{
   height: 17vw; max-width:70% ;object-fit: contain; margin-left: auto; 
   margin-right: auto; margin-top: auto; margin-bottom: auto;
 }
+
+#group-photo{
+  width:55%;
+  border-radius: 20px;
+}
+
+#gangster {
+  text-align: center;
+  width:90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width:576px){
+  #group-photo{
+    width:75%;
+  }
+}
+
+#bylaws {
+  text-align: center;
+  font-weight: bolder;
+  color:maroon;
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+#bylaws:hover {
+  color:gold;
+}
+
+.table {
+  width:75%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 0.1rem;
+}
