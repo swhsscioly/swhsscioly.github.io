@@ -622,3 +622,17 @@ nav, body, #wrapper{
 #bylaws:hover {
   color:gold;
 }
+
+table {
+  width:75%;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 1.3rem;
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+thead{
+  font-weight: bolder;
+  color:#561c31;
+}
