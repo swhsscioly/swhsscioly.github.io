@@ -148,7 +148,28 @@ nav a {margin-left:5px}
 .the_description {
     padding-left: 20px;
     padding-right: 20px;
+    text-align: center;
+}
+
+.ooter-blitz{
+  text-align: center;
+}
+
+#cccyg{
+  text-align: center;
+}
+
+@media (min-width:756px){
+
+  #cccyg {
     text-align: justify;
+  }
+  .the_description{
+    text-align: justify;
+  }
+  .ooter-blitz{
+    text-align: center;
+  }
 }
 
 .navbar-brand {color:#561c31; font-weight: bolder; font-size: max(2.5vw,1.2rem); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
