@@ -575,10 +575,14 @@ nav, body, #wrapper{
   display:block;
 }
 
+#odee {display:none}
+
 @media (max-width:700px){
   .big-container {
     flex-direction: column;
   }
+
+  
 
   .theKraus {
     text-align: center;
