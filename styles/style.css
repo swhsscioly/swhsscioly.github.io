@@ -518,6 +518,8 @@ img {
     pointer-events: none;
 }
 
+.ApplyClass {text-align: center;}
+
 
 nav, body, #wrapper{
   -webkit-tap-highlight-color: transparent;
@@ -550,6 +552,41 @@ nav, body, #wrapper{
   line-height: 1.2rem;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+.big-container {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.theKraus {
+  width:25%;
+}
+
+.theKraus img {
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
+  margin-bottom: -20px;
+}
+
+.theKraus a {
+  text-align: center;
+  display:block;
+}
+
+@media (max-width:700px){
+  .big-container {
+    flex-direction: column;
+  }
+
+  .theKraus {
+    text-align: center;
+    margin-bottom: 50px;
+    width:100%;
+  }
+}
+
 
 /*
 @media (max-width:500px){
