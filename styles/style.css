@@ -378,11 +378,6 @@ nav a:hover {
     animation-fill-mode: forwards;
 }
 
-@media (max-width:576px){
-  banner{font-size: 5vw; line-height: 5vw;  padding-top: 60px;
-  }
-}
-
 @keyframes moveToRight {
   0% {
       transform: translateX(-1000px);
