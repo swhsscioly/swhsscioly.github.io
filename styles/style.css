@@ -611,7 +611,7 @@ nav, body, #wrapper{
   .slideshow{display:none}
   .sponsors{
     display:flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: space-evenly;
     height:fit-content;
   }
