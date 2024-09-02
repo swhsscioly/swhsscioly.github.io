@@ -625,8 +625,8 @@ nav, body, #wrapper{
     max-height: 200px;
     }
 
-    #rotary {width:76%}
-    #rubin {width:73%}
+    .sponsors img {max-width:87%}
+    .sponsors img {max-height:95%}
   
     
   .s1{width:33.3%; height: 9vw;
