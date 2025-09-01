@@ -115,3 +115,31 @@ function Column({ children = [], gap = "10px", align = "center", justify = "cent
 
   return node;
 }
+
+function Line({ 
+  width = "100%",
+  height = "2px",
+  color = "#ccc",
+  margin = "10px 0"
+}) {
+  const node = document.createElement("div");
+  node.style.width = width;
+  node.style.height = height;
+  node.style.backgroundColor = color;
+  node.style.margin = margin;
+  return node;
+}
+
+function SizedBox({
+  width,
+  height,
+  color = "white",
+  margin,
+}) {
+  const node = document.createElement("div");
+  node.syle.width = width;
+  node.style.height = height;
+  node.style.backgroundColor = color;
+  if (margin) node.style.margin = margin;
+  return node;
+}
