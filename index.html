@@ -21,6 +21,7 @@
     <title>South Windsor High School Science Olympiad </title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/bootstrap.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="styles/reset.css">
    <link rel="stylesheet" href="styles/style.css"> 
     <link rel="icon" href="images/favicon.ico">
@@ -151,16 +152,43 @@
 
   <div class="image-container-homepage">
     <div class = "centered" id="c">
+      <script src="components.js"></script>
       <script>
-        setTimeout(main, 1900);
         function main(){
-          document.getElementById("c").innerHTML = "<p class='pt-serif-bold' id='banner'>CONNECTICUT'S SCIENCE OLYMPIAD CHAMPION FOR 4 YEARS IN A ROW</p><button type='button' id='jawn' onclick='window.scroll(1000,600)' style=' margin-top: 50px; font-family: PT Serif, Verdana, Geneva, Tahoma, sans-serif; font-weight: bolder' class='btn btn-outline-dark'>Read More</button>";}
-        </script>
-        <script>
-          window.onload = function()
-            {
-                document.getElementById('banner').scrollIntoView();
-            };
+          const container = document.getElementById("c");
+          container.appendChild(Column({
+            children: [
+              Text({
+                id: "banner",
+                text: "Connecticut's Science Olympiad Champion for 4 Years in a Row",
+                variant: "headline-large",
+                align: "center",
+                color: "white"
+              }),
+              Button({
+                child: Text({
+                  id: "jawn",
+                  text: "Show More",
+                  align: "center",
+                  color: "yellow",
+                  variant: "body-medium",
+                  animations: ["theFade"]
+                }),
+                align: "center",
+                width: "200px",
+                height: "45px",
+                backgroundColor: "transparent",
+                border: "2px solid yellow",
+                className: "btn btn-outline-dark",
+                onClick: () => window.scrollTo({top: 600, left: 0, behavior: 'smooth'}),
+              })
+            ]
+          }));
+        }
+        setTimeout(main, 1900);
+      </script>
+      <script>
+          window.onload = () => document.getElementById('banner').scrollIntoView();
 
         </script>
 

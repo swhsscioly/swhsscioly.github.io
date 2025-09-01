@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Component Test</title>
+  <style>
+    body {
+      background-color: #222;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #c {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="c"></div>
+
+  <!-- Your component system -->
+  <script src="components.js"></script>
+
+  <!-- Testing script -->
+  <script>
+    window.onload = function() {
+      const container = document.getElementById("c");
+          container.appendChild(Column({
+            children: [
+              Text({
+                id: "banner",
+                text: "CONNECTICUT'S SCIENCE OLYMPIAD CHAMPION FOR FOUR YEARS IN A ROW",
+                variant: "headline-large",
+                align: "center",
+                color: "white"
+              }),
+              Button({
+                child: Text({
+                  id: "jawn",
+                  text: "Show More",
+                  align: "center",
+                  color: "yellow",
+                  variant: "headline-large"
+                }),
+                border: "yellow",
+                backgroundColor: "black",
+                onClick: () => window.scrollTo({top: 600, left: 0, behavior: 'smooth'}),
+              })
+            ]
+          }));
+    }
+  </script>
+
+</body>
+</html>
+
