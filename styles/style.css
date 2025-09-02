@@ -1,3 +1,37 @@
+.navHoverAnim {
+  color: grey;
+  cursor: pointer;
+  transition: all 0.3s ease
+}
+
+.navHoverAnim:hover {
+  color: white
+}
+
+.showMoreHoverAnim {
+  color: #FFFFC5;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.showMoreHoverAnim:hover {
+  color: #550000;
+  background-color: #FFFFC5;
+}
+
+.fadeInPopImage {
+  opacity: 0;
+}
+
+.fadeInPopImage.show {
+  animation: fadeInAndPop 1s ease forwards;
+}
+@keyframes fadeInAndPop {
+  0% { opacity: 0; transform: scale(0.5); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
 .big-container {
   display:flex; flex-direction: row; justify-content:space-evenly;
 }
@@ -25,7 +59,7 @@ strong {font-weight: bolder; color:maroon}
   font-weight: 500;
 }
 
-.container-fluid {background-color:#ffff75; min-height: 75px; border-radius: 3px;}
+.container-fluid {background-color:#ffff75; min-height: 0px; border-radius: 3px;}
 
 .background {
   width:100%;
@@ -138,7 +172,13 @@ nav a {margin-left:5px}
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+}
+
+.nav-bar {
+  position: relative;
+  height: 0;
+}
+
 
 .the_description {
     padding-left: 20px;
@@ -157,6 +197,7 @@ nav a {margin-left:5px}
 #cccyg{
   text-align: center;
 }
+
 
 @media (min-width:756px){
 
@@ -259,7 +300,7 @@ margin-top: 20px;
 #luh {
   background-color: #B31B1B;
   height:9vw;
-  margin-top: auto;
+  margin-top: 0px;
   margin-bottom: auto;
   width:9vw
 }
@@ -267,14 +308,14 @@ margin-top: 20px;
 @media (min-width:700px){
   #luh {
     height:6vw;
-    margin-top: auto;
+    margin-top: 0px;
     margin-bottom: auto;
     width:6vw
   }
 }
 
 #gautam {
-  margin: 10px;
+  margin: 0px;
   text-justify: auto;
 }
 

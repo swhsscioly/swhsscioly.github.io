@@ -1,15 +1,20 @@
 /*
-Widgets implemented so far:
-- Text
-- Button
-- Row
-- Column
-- Image
-- SizedBox (altho it's kinda not working?)
-- Line (---------------------)
+Of Note:
+
+- The majority of the functions return a DOM Element
+
+- When they are composed they effectively create a tree:
+  - Each DOM Element is a node
+  - Some components can have a child/children
+
+- Rows & Columns can hold multiple children
+
+- The only component that doesn't return a DOM Element is Menu.
+  Rather, it returns a function that can be called to toggle it
 */
 
 const typographyVariants = {
+  "navbar": {fontSize: "20px", fontWeight: "50", lineHeight: "10px"},
   "body-small":  { fontSize: "23px", fontWeight: "40", lineHeight: "30px" },
   "body-medium": { fontSize: "20px", fontWeight: "50", lineHeight: "25px" },
   "headline-small": { fontSize: "30px", fontWeight: "100000", lineHeight: "30px" },
@@ -17,7 +22,7 @@ const typographyVariants = {
 };
 
 function isMobile() {
-  return window.innerWidth <= 768;
+  return window.outerWidth <= 768;
 }
 
 function Text(options) {
@@ -29,6 +34,7 @@ function Text(options) {
     as = "span",
     color = "black",
     font = "Georgia",
+    whiteSpace = "normal",
     animations = []
   } = options;
 
@@ -40,14 +46,15 @@ function Text(options) {
   node.style.lineHeight = style.lineHeight;
   node.style.textAlign = align;
   
-  node.style.color = color;
+  if (color) node.style.color = color;
   node.style.fontFamily = font;
 
   node.textContent = text;
+  node.style.whiteSpace = whiteSpace;
 
   if (id) node.id = id;
 
-  animations.forEach(anim => node.classList.add(`animate-${anim}`));
+  animations.forEach(anim => node.classList.add(anim));
 
   return node;
 }
@@ -71,25 +78,28 @@ function Button(options) {
   node.type = "button";
   node.id = id;
   node.onclick = onClick 
-  if (className) node.className = className;
+  if (className != null) node.className = className;
 
-  if (margin) node.style.margin = margin;
+  if (margin != null) node.style.margin = margin;
   if (padding) node.style.padding = padding;
   node.style.border = border;
   node.style.borderRadius = typeof borderRadius === "number" ? `${borderRadius}px` : borderRadius;
   if (width) node.style.width = width;
   if (height) node.style.height = height;
   if (backgroundColor) node.style.backgroundColor = backgroundColor;
-  
+
+  node.style.display = "flex";
+  node.style.justifyContent = "center";
+  node.style.alignItems = "center";
 
   if (child) node.append(child);
   
-  animations.forEach(anim => node.classList.add(`animate-${anim}`));
+  animations.forEach(anim => node.classList.add(anim));
 
   return node;
 }
 
-function Image({id="", src, alt = "", width, height, objectFit = "cover", borderRadius, className, animations = {}}) {
+function Image({id="", src, alt = "", width, height, objectFit = "cover", borderRadius, className, animations = []}) {
   const node = document.createElement("img");
   node.id = id;
   node.src = src;
@@ -102,6 +112,8 @@ function Image({id="", src, alt = "", width, height, objectFit = "cover", border
   node.style.objectFit = objectFit;
 
   if (className) node.classList.add(className);
+
+  animations.forEach(anim => node.classList.add(anim));
   
   return node; 
 }
@@ -115,19 +127,7 @@ function Row({ children = [], gap = "10px", align = "center", justify = "center"
   node.style.justifyContent = justify; // horizontal alignment
 
   children.forEach(child => node.append(child));
-  
-  setTimeout(() => {
-    let maxHeight = 0;
-    children.forEach(child => {
-      const rect = child.getBoundingClientRect();
-      if (rect.height > maxHeight) maxHeight = rect.height;
-    });
-   children.forEach(child => {
-      if (child.tagName === "IMG") {
-        child.style.maxHeight = maxHeight + "px";
-      }
-    });
-  }, 0);
+
   return node;
 }
 
@@ -164,6 +164,7 @@ function SizedBox({
   height,
   color = "white",
   margin,
+  padding,
   align
 }) {
   const node = document.createElement("div");
@@ -172,6 +173,33 @@ function SizedBox({
   node.style.backgroundColor = color;
   
   if (margin) node.style.margin = margin;
+  if (padding) node.style.padding = padding;
   if (child) node.appendChild(child);
   return node;
+}
+
+function Menu({ children = [], side = "left", width = "250px", background = "#fff", padding = "10px", margin = "10px"}) {
+  const node = document.createElement("div");
+  node.style.position = "fixed";
+  node.style.top = "0";
+  node.style[side] = `-${width}`;
+  node.style.width = width;
+  node.style.height = "100%";
+  node.style.background = background;
+  node.style.boxShadow = side === "left" ? "2px 0 10px rgba(0,0,0,0.1)" : "-2px 0 10px rgba(0,0,0,0.1)";
+  node.style.display = "flex";
+  node.style.flexDirection = "column";
+  node.style.padding = padding;
+  node.style.margin = margin;
+  node.style.transition = "all 0.3s ease";
+  
+  children.forEach(child => node.appendChild(child));
+  
+  let open = false;
+  function toggle() {
+    open = !open;
+    node.style[side] = open ? "0" : `-${width}`;
+  }
+
+  return toggle;
 }

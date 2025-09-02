@@ -82,81 +82,127 @@
 
    }
     </style>
-
-</head>
-
-<div id="wrapper">
-
-  <nav class="navbar bg-body-tertiary fixed-top" style="padding-top:0px; padding-bottom:0px" >
-    <div class="container-fluid">
-      <img class="bobcats-logo" src="images/Bobcats_Logo_prev_ui.png" style="height:5vw; padding-top: 3px; padding-bottom:3px">
-      <a class="navbar-brand" href="index.html">     
-           South Windsor High School Science Olympiad
-        </a>
-        <a class="navbar-brand" id = "navbar-small"  href="index.html">     
-          South Windsor High School Science Olympiad
-       </a>
-      <button style = "color:#561c31;" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><a href="index.html" id="jit" style="color:#561c31; text-decoration: none; font-weight: bold;">SWHS Science Olympiad</a> </h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item" id="cuh">
-              <a class="nav-link active" aria-current="page" href="index.html"> Home</a>
-            </li>
-           <!-- <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
-            </li>-->
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Leadership</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://sites.google.com/apps.southwindsorschools.org/swhs-invitational/home">Invitational</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="photos.html" >Gallery</a>
-            </li>
-         
-            <li class="nav-item">
-              <a class="nav-link" href="sponsors.html">Sponsors</a>
-            </li>
-            <li class="nav-item dropdown">
-            
-              <div class="embedded" style="padding-top: 40px;">
-                <a href="mailto:swhsscioly@gmail.com" target="_blank"><img height="35px" src="images/Icons/Gmail.jpg"></a>
-             <a href="https://www.instagram.com/swhsscioly?igsh=MWo0bXhsMmRyMGY3dQ%3D%3D" target="_blank"><img height="35px" style="padding-left: 25px;" src="images/Icons/Instagram.jpg"></a>
-            <a href="https://github.com/South-Windsor-High-School-Scioly" target="_blank"><img height="35px" src="images/Icons/Github.png" style="padding-left: 25px;"></a>
-            <a href="https://github.com/swhsscioly/swhsscioly.github.io" target="_blank"> <img height="35px" src="images/Icons/VSCode.png" style="padding-left: 25px;"
-            ></a>
-            
-            </div>
-                      </div><!--
-
-                News Segment from The Bobcat Prowl
-              <div class="embed"><p id="pluh"> Latest News: </p>
-                <embed src="images/SWHS’s Renowned Science Olympiad – The Bobcat Prowl.html" width="100%" height="300px">
-              </div>-->
-      </div>
-    </div>
-  </nav>
+</head> 
 <body >
   <script>
     var viewportWidth  = document.documentElement.clientWidth*0.50984308130;
     document.getElementsByClassName("image-container-homepage")[0].style.height=viewportWidth;
   </script>
     <div class="background">
+  <div class="image-container-homepage", id="image_container">
+    <div class="nav-bar" id= "nav-bar-modern">
+      <script src = "components.js"></script>
+      <script>
+        document.getElementById("nav-bar-modern").appendChild(
+          SizedBox({
+            color: "rgba(32, 32, 32, 0.9)",
+            margin: "0px",
+            child: Row({
+              children: [
+                SizedBox({width: "0.5em", backgroundColor: "transparent"}),
+                Image({
+                  src: "images/Bobcats_Logo_prev_ui.png",
+                  alt: "The Logo and Mascot of South Windsor High School",
+                  height: "1em",
+                }),
+                Text({
+                  text: "SWHS Science Olympiad",
+                  variant: "body-medium",
+                  whiteSpace: "nowrap",
+                  color: "white",
+                }),
+                SizedBox({
+                  color: "transparent",
+                  width: "100%"
+                }),
+                Button({
+                  child: Text({
+                    text: "Home",
+                    color: "white",
+                    variant: "navbar",
+                    align: "center"
+                  }),
+                  backgroundColor: "transparent",
+                  borderRadius: "0px",
+                  padding: "1 10px",
+                  margin: "0px",
+                  height: "1em",
+                  align: "center",
+                }),
+                Button({
+                  child: Text({
+                    text: "Leadership",
+                    color: "",
+                    variant: "navbar",
+                    align: "center"
+                  }),
+                  backgroundColor: "transparent",
+                  borderRadius: "0px",
+                  padding: "1 10px",
+                  margin: "0px",
+                  height: "1em",
+                  align: "center",
+                  animations: ["navHoverAnim"]
+                }),
+                Button({
+                  child: Text({
+                    text: "Invitational",
+                    color: "",
+                    variant: "navbar",
+                    align: "center"
+                  }),
+                  backgroundColor: "transparent",
+                  borderRadius: "0px",
+                  padding: "1 10px",
+                  margin: "0px",
+                  height: "1em",
+                  align: "center",
+                  animations: ["navHoverAnim"]
+                }),
+                Button({
+                  child: Text({
+                    text: "Gallery",
+                    color: "",
+                    variant: "navbar",
+                    align: "center"
+                  }),
+                  backgroundColor: "transparent",
+                  borderRadius: "0px",
+                  padding: "1 10px",
+                  margin: "0px",
+                  height: "1em",
+                  align: "center",
+                  animations: ["navHoverAnim"]
+                }),
+                Button({
+                  child: Text({
+                    text: "Sponsors",
+                    color: "",
+                    variant: "navbar",
+                    align: "center",
+                  }),
+                  backgroundColor: "transparent",
+                  borderRadius: "0px",
+                  padding: "1 10px",
+                  margin: "0px",
+                  height: "1em",
+                  align: "center",
+                  animations: ["navHoverAnim"]
+                }),
+                SizedBox({width: "0.5em", backgroundColor: "transparent"})
 
-  <div class="image-container-homepage">
+              ],
+              justify: "left",
+              gap: "0.5em"
+          })
+          })
+        );
+      </script>
+    </div>
     <div class = "centered" id="c">
-      <script src="components.js"></script>
       <script>
         function main(){
-          const container = document.getElementById("c");
-          container.appendChild(Column({
+          document.getElementById("c").appendChild(Column({
             children: [
               Text({
                 id: "banner",
@@ -169,10 +215,9 @@
               }),
               Button({
                 child: Text({
-                  id: "jawn",
                   text: "Show More",
                   align: "center",
-                  color: "yellow",
+                  color: "",
                   variant: "body-medium",
                   animations: ["theFade"],
                   font: "Roboto"
@@ -180,30 +225,21 @@
                 align: "center",
                 animations: ["theFade"],
                 width: "200px",
-                height: "55px",
-                backgroundColor: "transparent",
-                border: "2px solid yellow",
-                className: "btn btn-outline-dark",
-                onClick: () => window.scrollTo({top: 1100, left: 0, behavior: 'smooth'}),
+                height: "50px",
+                padding: "0px",
+                margin: "0px",
+                backgroundColor: "",
+                border: "2px solid #FFFFC5",
+                animations: ["showMoreHoverAnim"],
+                onClick: () => window.scrollTo({top: document.getElementById("image_container").offsetHeight, left: 0, behavior: 'smooth'}),
               })
             ]
           }));
         }
         setTimeout(main, 1000);
       </script>
-      <script>
-          window.onload = () => document.getElementById('banner').scrollIntoView();
-
-        </script>
-
-      <script>
-        if(document.getElementById("jawn").clicked==true){
-          window.scroll(1000,550);
-        }
-      </script>
-
     </div>
-    <img class = "image-homepage" src="images/2025States.jpeg" alt = "SWHS Scioly Team at States 2025" width = "100%" style="padding-top: 70px; ">          
+    <img class = "image-homepage" src="images/2025States.jpeg" alt = "SWHS Scioly Team at States 2025" width = "100%">          
     </div>
       </div> 
 <br>
@@ -222,7 +258,7 @@
                         text: "Who We Are",
                         variant: "headline-small",
                         align: "left",
-                        width: "100%"
+                        width: "100%",
                       }),
                       Line({}),
                       Row({
@@ -236,7 +272,8 @@
                           Image({
                             src: "images/Past Images/2018 MIT.jpg",
                             alt: "The South Windsor High School Science Olympiad Team at the MIT Invitational in 2018",
-                            height: "10em"
+                            height: "10em",
+                            animations: ["fadeInPopImage"]
                           })
                         ],
                         align: "flex",
@@ -259,7 +296,8 @@
                           Image({
                             src: "images/Past Images/2019 States .jpg",
                             alt: "The South Windsor High School Science Olympiad Team at the States Division at the University of Connecticut in the year 2019",
-                            height: "10em"
+                            height: "10em",
+                            animations: ["fadeInPopImage"]
                           })
                         ],
                         align: "flex",
@@ -282,7 +320,8 @@
                           Image({
                             src: "images/Past Images/2017 States.jpg",
                             alt: "SWHS SciOly Team at the Connecticut States Invitational, 2017",
-                            height: "10em"
+                            height: "10em", 
+                            animations: ["fadeInPopImage"]
                           })
                         ],
                         align: "flex",
@@ -305,7 +344,8 @@
                           Image({
                             src: "images/Past Images/states2022.png",
                             alt: "Celebrating after our win at the States Division, 2022",
-                            height: "10em"
+                            height: "10em",
+                            animations: ["fadeInPopImage"]
                           })
                         ],
                         align: "flex",
@@ -319,32 +359,27 @@
               }));
             }
           </script>
+          <script>
+          
+
+          const imgs = document.querySelectorAll('.fadeInPopImage');
+          let pause = false;
+
+          function onScroll() {
+            imgs.forEach(img => {
+              if (pause) return;
+              const rect = img.getBoundingClientRect();
+              if (rect.bottom < window.innerHeight && !img.classList.contains('show')) {
+                img.classList.add('show');
+              }
+            });
+          }
+
+          window.addEventListener('scroll', onScroll);
+          onScroll();
+          </script>
       </div>
         </div>
-        <script>
-          function isInViewport(item) {
-
-            var bounding = item.getBoundingClientRect(),
-                myElementHeight = item.offsetHeight,
-                myElementWidth = item.offsetWidth;
-
-            if(bounding.top >= -myElementHeight
-                && bounding.left >= -myElementWidth
-                && bounding.right <= (window.innerWidth || document.documentElement.clientWidth) + myElementWidth
-                && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) + myElementHeight) {
-                return true;
-            } else {
-                return false;
-            }
-          }
-        if(isInViewport(document.getElementsByClassName("the_description"))){
-          //document.getElementById("noah1").style.animation="movetoRight 1s ease-in-out";
-          //document.getElementById("noah2").style.animation="moveToLeft 1s ease-in-out";
-          //document.getElementById("gautam1").style.animation="movetoRight 1s ease-in-out";
-          //document.getElementById("gautam2").style.animation="moveToLeft 1s ease-in-out";
-        }
-
-        </script>
                 <p id="the_block" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align:center;font-size: 2.2rem; margin-left: 20px;">Thank you to our current sponsors</p>
 
         </div>
