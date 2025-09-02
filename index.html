@@ -354,10 +354,13 @@
     <p class="Address" style="font-size: 1.35rem; font-weight: lighter; line-height: 1.7rem;"> 161 Nevers Road <br>South Windsor<br> CT 06074</p>
                 
    
-    <span id="year"></span><p style="line-height: 1.5rem;padding-top:20px; color:#ffe49c; text-align: left; margin-bottom: 7px;">&copy; 2023-<script> document.write(new Date().getFullYear());
-    </script> Aditya Jha <br> <p style="line-height: 1.5rem;padding-top:0px; color:#ffe49c; text-align: left;padding-bottom: 10px;">All Rights Reserved</p>
+    <p style="line-height: 1.5rem;padding-top:20px; color:#ffe49c; text-align: left; margin-bottom: 7px;", id="year">
+        <script>
+          let content = document.getElementById("year");
+          content.innerHTML = "&copy; 2023-" + new Date().getFullYear() + "<br>Aditya Jha";
+        </script>
+    <p style="line-height: 1.5rem;padding-top:0px; color:#ffe49c; text-align: left;padding-bottom: 10px;"><br>All Rights Reserved</p>
 </footer>
-
-</div>
+    </div>
 </html>
 
