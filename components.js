@@ -112,7 +112,8 @@ function Image({id="", src, alt = "", width, height, objectFit = "cover", border
   node.style.objectFit = objectFit;
 
   if (className) node.classList.add(className);
-
+  
+  node.loading = "lazy";
   animations.forEach(anim => node.classList.add(anim));
   
   return node; 
