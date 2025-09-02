@@ -21,11 +21,11 @@ const typographyVariants = {
   "headline-large": { fontSize: "70px", fontWeight: "1000", lineHeight: "75px" }
 };
 
-export function isMobile() {
+function isMobile() {
   return window.outerWidth <= 768;
 }
 
-export function Text(options) {
+function Text(options) {
   const {
     id = "",
     text = "",
@@ -59,7 +59,7 @@ export function Text(options) {
   return node;
 }
 
-export function Button(options) {
+function Button(options) {
   const {
     id = "",
     child,
@@ -99,7 +99,7 @@ export function Button(options) {
   return node;
 }
 
-export function Image({id="", src, alt = "", width, height, objectFit = "cover", borderRadius, className, animations = []}) {
+function Image({id="", src, alt = "", width, height, objectFit = "cover", borderRadius, className, animations = []}) {
   const node = document.createElement("img");
   node.id = id;
   node.src = src;
@@ -118,7 +118,7 @@ export function Image({id="", src, alt = "", width, height, objectFit = "cover",
   return node; 
 }
 
-export function Row({ children = [], gap = "10px", align = "center", justify = "center"}) {
+function Row({ children = [], gap = "10px", align = "center", justify = "center"}) {
   const node = document.createElement("div");
   node.style.display = "flex";
   node.style.flexDirection = "row";
@@ -131,7 +131,7 @@ export function Row({ children = [], gap = "10px", align = "center", justify = "
   return node;
 }
 
-export function Column({ children = [], gap = "10px", align = "center", justify = "center"}) {
+function Column({ children = [], gap = "10px", align = "center", justify = "center"}) {
   const node = document.createElement("div");
   node.style.display = "flex";
   node.style.flexDirection = "column";
@@ -144,7 +144,7 @@ export function Column({ children = [], gap = "10px", align = "center", justify 
   return node;
 }
 
-export function Line({
+function Line({
   width = "100%",
   height = "2px",
   color = "#ccc",
@@ -158,7 +158,7 @@ export function Line({
   return node;
 }
 
-export function SizedBox({
+function SizedBox({
   child,
   width,
   height,
@@ -178,7 +178,7 @@ export function SizedBox({
   return node;
 }
 
-export function Menu({ children = [], side = "left", width = "250px", background = "#fff", padding = "10px", margin = "10px"}) {
+function Menu({ children = [], side = "left", width = "250px", background = "#fff", padding = "10px", margin = "10px"}) {
   const node = document.createElement("div");
   node.style.position = "fixed";
   node.style.top = "0";
