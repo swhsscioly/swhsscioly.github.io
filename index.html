@@ -91,111 +91,11 @@
     <div class="background">
   <div class="image-container-homepage", id="image_container">
     <div class="nav-bar" id= "nav-bar-modern">
-      <script src = "components.js"></script>
+      <script type = "module" src = "components.js"></script>
+      <script type = "module" src = "navbar.js"></script>
       <script>
         document.getElementById("nav-bar-modern").appendChild(
-          SizedBox({
-            color: "rgba(32, 32, 32, 0.9)",
-            margin: "0px",
-            child: Row({
-              children: [
-                SizedBox({width: "0.5em", backgroundColor: "transparent"}),
-                Image({
-                  src: "images/Bobcats_Logo_prev_ui.png",
-                  alt: "The Logo and Mascot of South Windsor High School",
-                  height: "1em",
-                }),
-                Text({
-                  text: "SWHS Science Olympiad",
-                  variant: "body-medium",
-                  whiteSpace: "nowrap",
-                  color: "white",
-                }),
-                SizedBox({
-                  color: "transparent",
-                  width: "100%"
-                }),
-                Button({
-                  child: Text({
-                    text: "Home",
-                    color: "white",
-                    variant: "navbar",
-                    align: "center"
-                  }),
-                  backgroundColor: "transparent",
-                  borderRadius: "0px",
-                  padding: "1 10px",
-                  margin: "0px",
-                  height: "1em",
-                  align: "center",
-                }),
-                Button({
-                  child: Text({
-                    text: "Leadership",
-                    color: "",
-                    variant: "navbar",
-                    align: "center"
-                  }),
-                  backgroundColor: "transparent",
-                  borderRadius: "0px",
-                  padding: "1 10px",
-                  margin: "0px",
-                  height: "1em",
-                  align: "center",
-                  animations: ["navHoverAnim"]
-                }),
-                Button({
-                  child: Text({
-                    text: "Invitational",
-                    color: "",
-                    variant: "navbar",
-                    align: "center"
-                  }),
-                  backgroundColor: "transparent",
-                  borderRadius: "0px",
-                  padding: "1 10px",
-                  margin: "0px",
-                  height: "1em",
-                  align: "center",
-                  animations: ["navHoverAnim"]
-                }),
-                Button({
-                  child: Text({
-                    text: "Gallery",
-                    color: "",
-                    variant: "navbar",
-                    align: "center"
-                  }),
-                  backgroundColor: "transparent",
-                  borderRadius: "0px",
-                  padding: "1 10px",
-                  margin: "0px",
-                  height: "1em",
-                  align: "center",
-                  animations: ["navHoverAnim"]
-                }),
-                Button({
-                  child: Text({
-                    text: "Sponsors",
-                    color: "",
-                    variant: "navbar",
-                    align: "center",
-                  }),
-                  backgroundColor: "transparent",
-                  borderRadius: "0px",
-                  padding: "1 10px",
-                  margin: "0px",
-                  height: "1em",
-                  align: "center",
-                  animations: ["navHoverAnim"]
-                }),
-                SizedBox({width: "0.5em", backgroundColor: "transparent"})
-
-              ],
-              justify: "left",
-              gap: "0.5em"
-          })
-          })
+          BuildNavBar("Home")
         );
       </script>
     </div>
