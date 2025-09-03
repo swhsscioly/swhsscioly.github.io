@@ -13,16 +13,29 @@ Of Note:
   Rather, it returns a function that can be called to toggle it
 */
 
-const typographyVariants = {
-  "navbar": {fontSize: "20px", fontWeight: "50", lineHeight: "10px"},
-  "body-small":  { fontSize: "23px", fontWeight: "40", lineHeight: "30px" },
-  "body-medium": { fontSize: "20px", fontWeight: "50", lineHeight: "25px" },
-  "headline-small": { fontSize: "30px", fontWeight: "100000", lineHeight: "30px" },
-  "headline-large": { fontSize: "70px", fontWeight: "1000", lineHeight: "75px" }
-};
-
 function isMobile() {
   return window.outerWidth <= 768;
+}
+
+let typographyVariants;
+
+if (isMobile()) {
+  typographyVariants = {
+  "navbar": {fontSize: "20px", fontWeight: "50", lineHeight: "10px"},
+  "body-small":  { fontSize: "13px", fontWeight: "40", lineHeight: "15px" },
+  "body-medium": { fontSize: "15px", fontWeight: "50", lineHeight: "18px" },
+  "headline-small": { fontSize: "20px", fontWeight: "600", lineHeight: "20px" },
+  "headline-large": { fontSize: "30px", fontWeight: "800", lineHeight: "30px" }
+  };
+}
+else {
+  typographyVariants = {
+    "navbar": {fontSize: "20px", fontWeight: "50", lineHeight: "10px"},
+    "body-small":  { fontSize: "23px", fontWeight: "40", lineHeight: "30px" },
+    "body-medium": { fontSize: "20px", fontWeight: "50", lineHeight: "25px" },
+    "headline-small": { fontSize: "30px", fontWeight: "600", lineHeight: "30px" },
+    "headline-large": { fontSize: "70px", fontWeight: "800", lineHeight: "75px" }
+  };
 }
 
 function Text(options) {
@@ -179,7 +192,7 @@ function SizedBox({
   return node;
 }
 
-function Menu({ children = [], side = "left", width = "250px", background = "#fff", padding = "10px", margin = "10px"}) {
+function Menu({ children = [], side = "left", width = "250px", background = "rgba(255, 255, 255, 1)", padding = "10px", margin = "10px"}) {
   const node = document.createElement("div");
   node.style.position = "fixed";
   node.style.top = "0";
@@ -193,6 +206,7 @@ function Menu({ children = [], side = "left", width = "250px", background = "#ff
   node.style.padding = padding;
   node.style.margin = margin;
   node.style.transition = "all 0.3s ease";
+  node.style.opacity = "1";
   
   children.forEach(child => node.appendChild(child));
   
@@ -201,6 +215,8 @@ function Menu({ children = [], side = "left", width = "250px", background = "#ff
     open = !open;
     node.style[side] = open ? "0" : `-${width}`;
   }
+  
+  document.body.appendChild(node);
 
   return toggle;
 }

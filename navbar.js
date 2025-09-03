@@ -47,6 +47,31 @@ function BuildNavBarWidget(widget_str, selected) {
   }
 }
 function BuildNavBar(selected) {
+  if (isMobile()) {
+    let m = Menu({
+      children: navbar_widgets.map(widget => BuildNavBarWidget(widget, selected))
+    });
+    return SizedBox({
+      color: "rgba(32, 32, 32, 0.9)",
+      margin: "0px",
+      child: Button({
+        child: Text({
+          color: "",
+          text: "☰",
+          variant: "navbar",                  
+          align: "center"
+        }),
+        backgroundColor: "transparent",
+        borderRadius: "0px",
+        padding: "1 10px",
+        margin: "0px",
+        height: "1em",
+        align: "center",
+        animations: ["navHoverAnim"],
+        onClick: () => m()
+      })
+    });
+  }
   return SizedBox({
     color: "rgba(32, 32, 32, 0.9)",
     margin: "0px",

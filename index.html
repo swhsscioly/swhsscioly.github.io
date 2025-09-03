@@ -114,7 +114,7 @@
                 animations: ["theFade"],
                 font: "Roboto"
               }),
-              Button({
+              ...(!isMobile()) ? [Button({
                 child: Text({
                   text: "Show More",
                   align: "center",
@@ -125,7 +125,6 @@
                 }),
                 align: "center",
                 animations: ["theFade"],
-                width: "200px",
                 height: "50px",
                 padding: "0px",
                 margin: "0px",
@@ -133,7 +132,7 @@
                 border: "2px solid #FFFFC5",
                 animations: ["showMoreHoverAnim"],
                 onClick: () => window.scrollTo({top: document.getElementById("image_container").offsetHeight, left: 0, behavior: 'smooth'}),
-              })
+              })] : []
             ]
           }));
         }
@@ -147,8 +146,103 @@
       <div id = "info-section">
           <script>
             if (isMobile()) {
-            
-            } else {
+               document.getElementById('info-section').appendChild(Row({
+                children: [
+                  SizedBox({width: "10px"}),
+                  Column({
+                    children: [
+                      SizedBox({height: "10px"}),
+                      Image({
+                        src: "images/Past Images/2018 MIT.jpg",
+                        alt: "The South Windsor High School Science Olympiad Team at the MIT Invitational in 2018",
+                        height: "10em",
+                        animations: ["fadeInPopImage"]
+                      }),
+                      Text({
+                        text: "Who We Are",
+                        variant: "headline-small",
+                        align: "left",
+                        width: "100%",
+                      }),
+                      Line({}),
+                      Row({
+                        children: [
+                          SizedBox({
+                            child: Text({
+                              text: "Founded in 2003, the South Windsor High School Science Olympiad team is a group of motivated and bright students at South Windsor High School who compete in the nation's most prestigious science tournament. Every year, we assemble two teams and compete at invitational and state tournaments. Science Olympiad is challenging and requires great amounts of dedication and effort from every student. We give up our free time to study science because science inspires us and motivates us.",
+                              variant: "body-medium",
+                            }),
+                          }),
+                        ],
+                        align: "flex",
+                      }),
+                      Image({
+                        src: "images/Past Images/2019 States .jpg",
+                        alt: "The South Windsor High School Science Olympiad Team at the States Division at the University of Connecticut in the year 2019",
+                       height: "10em",
+                        animations: ["fadeInPopImage"]
+                      }),
+                      Text({
+                        text: "Our Mission",
+                        variant: "headline-small",
+                        align: "left",
+                        width: "100%"
+                      }),
+                      Line({}),
+                      SizedBox({
+                        child: Text({
+                          text: "We push our intellectual limits in the pursuit of knowledge and joy. Throughout the years, we have won numerous tournaments due to the hard work of our team. Recently, our team has won the Connecticut State Science Olympiad tournament two years in a row and has appeared at the national tournament. Our success is a direct result of the work every team member puts in everyday after school. We have also crafted a nationwide alumni network of scientists and engineers who advance the frontiers of science and technology everyday.",
+                          variant: "body-medium",
+                        }),
+                      }),
+                      Image({
+                        src: "images/Past Images/2017 States.jpg",
+                        alt: "SWHS SciOly Team at the Connecticut States Invitational, 2017",
+                        height: "10em", 
+                        animations: ["fadeInPopImage"]
+                      }),
+                      Text({
+                        text: "Achievements",
+                        variant: "headline-small",
+                        align: "left",
+                        width: "100%"
+                      }),
+                      Line({}),
+                        SizedBox({
+                          child: Text({
+                          text: "Over the years, we have won 1st place the CT State Science Olympiad tournament three times and have finished 2nd 14 times. Last season, we won 12 medals. This year, we hope to beat that number as we are always improving. Our team has done very well at invitational torunaments at prestigious universities, including Cornell, MIT, and Yale. We have also competed in the National Science Olympiad tournament every time we have won the state tournament (3 times)",
+                          variant: "body-medium",
+                        }),
+                      }),
+
+                      Image({
+                        src: "images/Past Images/states2022.png",
+                        alt: "Celebrating after our win at the States Division, 2022",
+                        height: "10em",
+                        animations: ["fadeInPopImage"]
+                      }),
+                      Text({
+                        text: "2025 Season",
+                        variant: "headline-small",
+                        align: "left",
+                        width: "100%"
+                      }),
+                      Line({}),
+                      SizedBox({
+                        child: Text({
+                        text: "We push our intellectual limits in the pursuit of knowledge and joy. Throughout the years, we have won numerous tournaments due to the hard work of our team. Recently, our team has won the Connecticut State Science Olympiad tournament two years in a row and has appeared at the national tournament. Our success is a direct result of the work every team member puts in everyday after school. We have also crafted a nationwide alumni network of scientists and engineers who advance the frontiers of science and technology everyday.",
+                        variant: "body-medium",
+                        }),
+                      }),
+                      SizedBox({height: "100px"})
+
+                    ]
+                  }),
+                  SizedBox({width: "10px"})
+                ]
+              }));
+            }
+            else {
               document.getElementById('info-section').appendChild(Row({
                 children: [
                   SizedBox({width: "50px"}),
