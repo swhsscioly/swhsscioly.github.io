@@ -14,7 +14,7 @@ Of Note:
 */
 
 function isMobile() {
-  return window.outerWidth <= 768;
+  return window.innerWidth <= 768;
 }
 
 let typographyVariants;
