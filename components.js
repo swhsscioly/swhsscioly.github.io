@@ -80,6 +80,7 @@ function Button(options) {
     onClick = () => console.log("Button Pressed"),
     margin,
     padding = "10px 20px",
+    position,
     border = "none",
     borderRadius = 8,
     width,
@@ -93,6 +94,10 @@ function Button(options) {
   node.onclick = onClick 
   if (className != null) node.className = className;
 
+  if (position) {
+    node.style.position = position;
+    node.style.zOrder = "99998";
+  }
   if (margin != null) node.style.margin = margin;
   if (padding) node.style.padding = padding;
   node.style.border = border;
@@ -192,15 +197,16 @@ function SizedBox({
   return node;
 }
 
-function Menu({ children = [], side = "left", width = "250px", background = "rgba(255, 255, 255, 1)", padding = "10px", margin = "10px"}) {
+function Menu({ children = [], side = "right", width = "200px", background = "rgba(64, 64, 64, 1)", padding = "10px", margin = "10px"}) {
   const node = document.createElement("div");
   node.style.position = "fixed";
+  node.style.zIndex = "99999";
   node.style.top = "0";
   node.style[side] = `-${width}`;
   node.style.width = width;
   node.style.height = "100%";
-  node.style.background = background;
-  node.style.boxShadow = side === "left" ? "2px 0 10px rgba(0,0,0,0.1)" : "-2px 0 10px rgba(0,0,0,0.1)";
+  node.style.backgroundColor = background;
+  node.style.boxShadow = side === "left" ? "1px 0 10px rgba(0,0,0,0.1)" : "-1px 0 10px rgba(0,0,0,0.1)";
   node.style.display = "flex";
   node.style.flexDirection = "column";
   node.style.padding = padding;
@@ -211,9 +217,12 @@ function Menu({ children = [], side = "left", width = "250px", background = "rgb
   children.forEach(child => node.appendChild(child));
   
   let open = false;
-  function toggle() {
-    open = !open;
-    node.style[side] = open ? "0" : `-${width}`;
+  function toggle(x) {
+    console.log(open, x);
+    if (open != x) {
+      open = x;
+      node.style[side] = x ? "0" : `-${width}`;
+    }
   }
   
   document.body.appendChild(node);
