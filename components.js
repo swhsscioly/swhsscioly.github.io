@@ -18,7 +18,9 @@ const typographyVariants = {
   "body-small":  { fontSize: "23px", fontWeight: "40", lineHeight: "30px" },
   "body-medium": { fontSize: "20px", fontWeight: "50", lineHeight: "25px" },
   "headline-small": { fontSize: "30px", fontWeight: "100000", lineHeight: "30px" },
-  "headline-large": { fontSize: "70px", fontWeight: "1000", lineHeight: "75px" }
+  "headline-medium": { fontSize: "50px", fontWeight: "700", lineHeight: "45px" },
+  "headline-large": { fontSize: "70px", fontWeight: "1000", lineHeight: "75px" },
+  "headline-xlarge": { fontSize: "90px", fontWeight: "1000", lineHeight: "95px" }
 };
 
 function isMobile() {

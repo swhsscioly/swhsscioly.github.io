@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" prefix="https://swhsscioly.github.io/">
+<head>
+  <meta name="google-site-verification" content="YhW25V12fiiAK3tTEAdbUr_Ftli6Obn5FsZ5jIRbbF0" />
+  <meta property="og:description" content="Official website of the South Windsor High School Science Olympiad team" />
+  <meta property="og:site_name" content="South Windsor High School Science Olympiad"/>
+  <meta property="og:title" content="South Windsor High School Science Olympiad"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://swhsscioly.github.io/">
+  <meta property="og:image" itemprop="image" content="https://swhsscioly.github.io/images/Cornell-2023-Images/IMG_2174.jpg"/>
+  <meta charset="utf-8">
+  <link rel="sitemap" type="applications/xml" title="sitemap" href="sitemap.xml">
+  <meta http-equiv="X-Frame-Options" content="deny">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <meta name="author" content="Aditya Jha">
+  <meta name="description" content="This is the official website of the South Windsor High School Science Olympiad team. Contact information is included on this page.">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" href="images/favicon.ico">
+
+  <style>
+    html, body { margin: 0; padding: 0; box-sizing: border-box; }
+
+    .lead-link { color: maroon; text-decoration: underline; display:inline-block; }
+    .lead-link:hover { color: #ffe49c; text-decoration: none; }
+
+    .insta-link { color: maroon; text-decoration: none; }
+    .insta-link:hover { color:#ffe49c; }
+
+    .email-icon { margin-top: 20px; width:50px; display:block; margin-left:auto; margin-right:auto; }
+
+    footer .footer_img { max-width: 100%; display:block; margin-bottom:8px; }
+
+    @media (max-width: 768px) {
+      .card-row { flex-direction: column; align-items: center; gap: 20px !important; }
+    }
+
+    #content { padding-bottom: 40px; }
+  </style>
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <script src="components.js"></script>
+  <script src="navbar.js"></script>
+  <script>
+    document.getElementById("navbar").appendChild(BuildNavBar("Contact"));
+  </script>
+
+  <main id="content"></main>
+
+  <script>
+    function SectionHeader(
+      text,
+      variant = "headline-small",
+      underlineWidth = "6em",
+      underlineHeight = "4px",
+      color = "maroon",
+      topGap = "24px"
+    ) {
+      const spacer = SizedBox({ height: topGap });
+      const headerText = Text({
+        text,
+        variant,
+        color,
+        align: "center",
+        font: "Georgia"
+      });
+      const underline = Line({
+        width: underlineWidth,
+        height: underlineHeight,
+        color,
+        margin: "8px auto"
+      });
+      return Column({
+        children: [spacer, headerText, underline],
+        gap: "6px",
+        align: "center"
+      });
+    }
+
+    function buildPersonCard({ imgSrc, imgAlt, name, mailto, role }) {
+      const img = Image({
+        src: imgSrc,
+        alt: imgAlt,
+        width: "180px",
+        height: "270px",
+        borderRadius: "15px"
+      });
+
+      const anchor = document.createElement("a");
+      anchor.href = mailto;
+      anchor.className = "lead-link";
+      anchor.appendChild(
+        Text({
+          text: name,
+          variant: "headline-small",
+          color: "maroon",
+          font: "Georgia",
+          align: "center",
+          as: "span"
+        })
+      );
+
+      const roleNode = Text({
+        text: role,
+        variant: "body-medium",
+        color: "black",
+        font: "Georgia",
+        align: "center",
+        as: "p",
+        whiteSpace: "pre-line"
+      });
+
+      const mailAnchor = document.createElement("a");
+      mailAnchor.href = mailto;
+      const envelope = Image({
+        src: "images/envelope-at-fill.svg",
+        alt: "email",
+        width: "50px",
+        height: "50px"
+      });
+      envelope.classList.add("email-icon");
+      mailAnchor.appendChild(envelope);
+
+      return Column({
+        children: [img, anchor, roleNode, mailAnchor],
+        gap: "10px",
+        align: "center"
+      });
+    }
+
+    const content = document.getElementById("content");
+
+    content.appendChild(
+      SectionHeader("Contact Us", "headline-medium", "12em", "6px", "maroon", "12px")
+    );
+
+    // ---- Intro text ----
+    const introWrapper = document.createElement("div");
+    introWrapper.style.margin = "30px";
+    introWrapper.style.textAlign = "center";
+
+    const beforeText = Text({
+      text: "Thank you for checking out our website. To contact us, please email our team captains and/or coaches. You can also email us at: ",
+      variant: "body-small",
+      color: "black",
+      font: "Georgia",
+      as: "span"
+    });
+
+    const mailA = document.createElement("a");
+    mailA.href = "mailto:swhsscioly@gmail.com";
+    mailA.className = "lead-link";
+    mailA.appendChild(
+      Text({
+        text: "swhsscioly@gmail.com",
+        variant: "body-small",
+        color: "maroon",
+        font: "Georgia",
+        as: "span"
+      })
+    );
+
+    const afterText = Text({
+      text: ". A response will typically be sent within three business days of the query. Sponsorship requests should also be sent to our team captains.",
+      variant: "body-small",
+      color: "black",
+      font: "Georgia",
+      as: "span"
+    });
+
+    introWrapper.appendChild(beforeText);
+    introWrapper.appendChild(mailA);
+    introWrapper.appendChild(afterText);
+    content.appendChild(introWrapper);
+
+    content.appendChild(
+      SectionHeader("Other Sources", "headline-small", "8em", "4px", "maroon", "24px")
+    );
+
+    const instaWrapper = document.createElement("div");
+    instaWrapper.style.textAlign = "center";
+    instaWrapper.style.margin = "25px 30px 30px";
+
+    const instaAnchor = document.createElement("a");
+    instaAnchor.href = "https://www.instagram.com/swhsscioly";
+    instaAnchor.target = "_blank";
+    instaAnchor.className = "insta-link";
+
+    const instaRow = Row({
+      gap: "12px",
+      align: "center",
+      justify: "center",
+      children: [
+        Image({
+          src: "images/insta-logo.png",
+          alt: "Instagram logo",
+          width: 40,  
+          height: 40 
+        }),
+        Text({
+          text: "@swhsscioly",
+          variant: "headline-small",
+          color: "maroon",
+          font: "Georgia",
+          as: "span"
+        })
+      ]
+    });
+
+    instaAnchor.appendChild(instaRow);
+    instaWrapper.appendChild(instaAnchor);
+    content.appendChild(instaWrapper);
+
+    
+    (function adjustForNav() {
+      try {
+        const nav = document.getElementById("navbar");
+        if (!nav) return;
+        setTimeout(() => {
+          const rect = nav.getBoundingClientRect();
+          const navHeight = rect.height || 0;
+          document.getElementById("content").style.paddingTop =
+            navHeight + 12 + "px";
+        }, 90);
+      } catch (e) {
+        console.warn("adjustForNav failed", e);
+      }
+    })();
+  </script>
+
+  <footer>
+    <img src="images/Footer_Image-removebg-preview.png" class="footer_img" alt="The SWHS Logo of a Bobcat. This is also the logo of our Science Olympiad Team.">
+
+    <p class="Address" style="color:white; text-decoration: underline; font-weight: normal;">
+      <a style="color:white;" target="_blank" href="https://highschool.southwindsorschools.org/"> South Windsor High School Science Olympiad</a>
+    </p>
+
+    <p class="Address" style="font-size: 1.35rem; font-weight: lighter; line-height: 1.7rem;">
+      161 Nevers Road <br>South Windsor<br> CT 06074
+    </p>
+
+    <p id="year" style="line-height: 1.5rem; padding-top:20px; color:#ffe49c; text-align: left; margin-bottom: 7px;">
+      <script>
+        (function(){
+          const el = document.getElementById("year");
+          if (el) el.innerHTML = "&copy; 2023-" + new Date().getFullYear() + "<br>Aditya Jha";
+        })();
+      </script>
+    </p>
+
+    <p style="line-height: 1.5rem; padding-top:0px; color:#ffe49c; text-align: left; padding-bottom: 10px;">
+      <br>All Rights Reserved
+    </p>
+  </footer>
+
+</body>
+</html>
