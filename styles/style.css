@@ -1,11 +1,13 @@
 .navHoverAnim {
   color: grey;
   cursor: pointer;
-  transition: all 0.3s ease
+  transition: all 0.3s ease;
+  transform: scale(1.0);
 }
 
 .navHoverAnim:hover {
-  color: white
+  color: white;
+  transform: scale(1.1);
 }
 
 .showMoreHoverAnim {
@@ -13,11 +15,13 @@
   background-color: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
+  transform: scale(1.0);
 }
 
 .showMoreHoverAnim:hover {
   color: #550000;
   background-color: #FFFFC5;
+  transform: scale(1.1);
 }
 
 .fadeInPopImage {
