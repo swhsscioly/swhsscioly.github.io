@@ -35,8 +35,8 @@ else {
     "body-medium": { fontSize: "20px", fontWeight: "50", lineHeight: "25px" },
     "headline-small": { fontSize: "30px", fontWeight: "600", lineHeight: "30px" },
     "headline-large": { fontSize: "70px", fontWeight: "800", lineHeight: "75px" },
-    "heading-xlarge": {fontSize: "70px", fontWeight: "800", lineHeight: "75px" },
-    "heading-medium": { fontSize:  "30px", fiontWeight: "600", lineHeight: "30px"}
+    "headline-xlarge": {fontSize: "70px", fontWeight: "800", lineHeight: "75px" },
+    "headline-medium": { fontSize:  "30px", fiontWeight: "600", lineHeight: "30px"}
   };
 }
 
