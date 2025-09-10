@@ -113,10 +113,6 @@ nav a {margin-left:5px}
     background-size:contain;
     background-repeat: no-repeat; 
     position:relative;
-    animation-name:theFade;
-    animation-duration:1s;
-    animation-timing-function: ease-out;
-
   }
 
   .image-container-homepage{
