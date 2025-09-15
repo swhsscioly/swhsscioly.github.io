@@ -24,6 +24,20 @@
   transform: scale(1.1);
 }
 
+.infoHoverAnim {
+  color: maroon;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: scale(1.0);
+}
+
+.infoHoverAnim:hover {
+  color: #FFFFC5;
+  background-color: maroon;
+  transform: scale(1.1);
+}
+
 .fadeInPopImage {
   opacity: 0;
 }
@@ -99,6 +113,40 @@ footer .embedded img{
 .embedded p {padding-bottom: 10px;}
 
 nav a {margin-left:5px}
+
+@keyframes slideLeftAnim {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);  
+    opacity: 1;
+  }
+}
+
+.slideLeftBox {
+  animation: slideLeftAnim 2s forwards;
+  position: relative;
+  z-index: -10;
+}
+
+@keyframes slideRightAnim {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);  
+    opacity: 1;
+  }
+}
+
+.slideRightBox {
+  animation: slideRightAnim 2s forwards;
+  position: relative;
+  z-index: -10;
+}
 
 .image-container-homepage {
     z-index: 1000;

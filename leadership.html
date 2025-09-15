@@ -100,7 +100,7 @@
           <script>
             function personBoxBuilder(photo_src, name, desc, email) {
               let contact = email ? [Button({
-                height: "1em",
+                height: "0.1em",
                 padding: "0px",
                 margin: "0px",
                 child: Text({
@@ -118,8 +118,9 @@
                     src: photo_src,
                     alt: `Our ${desc}, ${name}`,
                     height: "5em",
-                    borderRadius: "10px",
-                    animations: ["fadeInPopImage"]
+                    borderRadius: "0.5em",
+                    animations: ["fadeInPopImage"],
+                    border: "5px solid maroon"
                   }),
                   Text({
                     text: name,
@@ -128,28 +129,20 @@
                     align: "middle",
                     whiteSpace: "pre-wrap"
                   }),
-                  SizedBox({
-                    height: "2em",
-                    width: "5em",
-                    child: Column({
-                      children: [
-                        Text({
-                          text: desc,
-                          font: ["Georgia"],
-                          variant: "body-medium",
-                          whiteSpace: "pre-wrap",
-                          align: "middle"
-                        }),
-                        ...contact
-                      ],
-                      gap: "0em"
-                    })
-                  })
+                  Text({
+                    text: desc,
+                    font: ["Georgia"],
+                    variant: "body-medium",
+                    whiteSpace: "pre-wrap",
+                    align: "middle"
+                  }),
+                  ...contact
                 ]
               });
             }
             document.getElementById("content").append(
-              Column({
+              SidePadding({
+                child: Column({
                 children: [
                   SizedBox({height: "1em"}),
                   Text({
@@ -163,7 +156,7 @@
                     width: "80%",
                   }),
                   Text({
-                    text: "Thank you to all our Coaches and Captains -- past and present!\nWe really couldn't have done it with out you!",
+                    text: "Thank you to all our Coaches and Captains -- past and present!\nWe really couldn't have done it without you!",
                     variant: "body-medium",
                     color: "maroon",
                     font: ["Georgia"],
@@ -177,22 +170,21 @@
                     font: ["Georgia"]
                   }),
                   Line({width: "60%", color: "grey"}),
-                  Row({
+                  FlexRow({
                     children: [
                       personBoxBuilder("images/leadership-2026/SCI-Kraus.jpg", "Joshua Kraus", "Team Coach\nFaculty Advisor", "mailto:jkraus@swindsor.k12.ct.us"), 
                       personBoxBuilder("images/leadership-2026/IMG-20250902-WA0021.jpg", "Sanjana Kadiyala", "Team Captain\n\n", "mailto:sk30648@southwindsorschools.org"),
-
                     ],
                     gap: "1em"
                   }),
-                  SizedBox({height: "20px"}),
+                  SizedBox({height: "1em"}),
                   Text({
                     text: "Associate Captains",
                     variant: "headline-medium",
                     font: ["Georgia"]
                   }),
                   Line({width: "60%", color: "grey"}),
-                  Row({
+                  FlexRow({
                     children: [
                       personBoxBuilder("images/leadership-2026/IMG-20250902-WA0024.jpg", "Caleb\nBeaulieu", "Associate Captain"), 
                       personBoxBuilder("images/leadership-2026/IMG-20250902-WA0022.jpg", "Maher\nMawla", "Associate Captain"), 
@@ -202,6 +194,8 @@
                   })
                 ],
                 gap: "0em"
+                }),
+                width: "5px"
               })
             );
           </script>

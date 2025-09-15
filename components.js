@@ -21,11 +21,13 @@ let typographyVariants;
 
 if (isMobile()) {
   typographyVariants = {
-  "navbar": {fontSize: "20px", fontWeight: "50", lineHeight: "10px"},
-  "body-small":  { fontSize: "13px", fontWeight: "40", lineHeight: "15px" },
-  "body-medium": { fontSize: "15px", fontWeight: "50", lineHeight: "18px" },
-  "headline-small": { fontSize: "20px", fontWeight: "600", lineHeight: "20px" },
-  "headline-large": { fontSize: "30px", fontWeight: "800", lineHeight: "30px" }
+    "navbar": {fontSize: "20px", fontWeight: "50", lineHeight: "10px"},
+    "body-small":  { fontSize: "13px", fontWeight: "40", lineHeight: "15px" },
+    "body-medium": { fontSize: "15px", fontWeight: "50", lineHeight: "18px" },
+    "headline-small": { fontSize: "20px", fontWeight: "600", lineHeight: "20px" },
+    "headline-large": { fontSize: "30px", fontWeight: "800", lineHeight: "30px" },
+    "headline-xlarge": {fontSize: "30px", fontWeight: "800", lineHeight: "30px" },
+    "headline-medium": { fontSize:  "20px", fontWeight: "600", lineHeight: "20px" }         
   };
 }
 else {
@@ -36,7 +38,7 @@ else {
     "headline-small": { fontSize: "30px", fontWeight: "600", lineHeight: "30px" },
     "headline-large": { fontSize: "70px", fontWeight: "800", lineHeight: "75px" },
     "headline-xlarge": {fontSize: "70px", fontWeight: "800", lineHeight: "75px" },
-    "headline-medium": { fontSize:  "30px", fiontWeight: "600", lineHeight: "30px"}
+    "headline-medium": { fontSize:  "35px", fontWeight: "600", lineHeight: "30px" }
   };
 }
 
@@ -119,7 +121,7 @@ function Button(options) {
   return node;
 }
 
-function Image({id="", src, alt = "", width, height, objectFit = "cover", borderRadius, className, animations = []}) {
+function Image({id="", src, alt = "", width, height, objectFit = "cover", borderRadius, border, className, animations = []}) {
   const node = document.createElement("img");
   node.id = id;
   node.src = src;
@@ -132,6 +134,7 @@ function Image({id="", src, alt = "", width, height, objectFit = "cover", border
   node.style.objectFit = objectFit;
 
   if (className) node.classList.add(className);
+  if (border) node.style.border = border;
   
   node.loading = "lazy";
   animations.forEach(anim => node.classList.add(anim));
@@ -139,7 +142,7 @@ function Image({id="", src, alt = "", width, height, objectFit = "cover", border
   return node; 
 }
 
-function Row({ children = [], gap = "10px", align = "center", justify = "center"}) {
+function Row({ children = [], gap = "10px", align = "center", justify = "center", padding, margin}) {
   const node = document.createElement("div");
   node.style.display = "flex";
   node.style.flexDirection = "row";
@@ -147,18 +150,27 @@ function Row({ children = [], gap = "10px", align = "center", justify = "center"
   node.style.alignItems = align; // vertical alignment
   node.style.justifyContent = justify; // horizontal alignment
 
+
+  if (padding) node.style.padding = padding;
+  if (margin) node.style.margin = margin;
+
+
+
   children.forEach(child => node.append(child));
 
   return node;
 }
 
-function Column({ children = [], gap = "10px", align = "center", justify = "center"}) {
+function Column({ children = [], gap = "10px", align = "center", justify = "center", padding, margin}) {
   const node = document.createElement("div");
   node.style.display = "flex";
   node.style.flexDirection = "column";
   node.style.gap = gap;               // space between elements
   node.style.alignItems = align;      // horizontal alignment
   node.style.justifyContent = justify; // vertical alignment
+
+  if (padding) node.style.padding = padding;
+  if (margin) node.style.margin = margin;
 
   children.forEach(child => node.append(child));
 
@@ -186,16 +198,22 @@ function SizedBox({
   color = "white",
   margin,
   padding,
-  align
+  align,
+  animations = [],
 }) {
   const node = document.createElement("div");
   node.style.width = width;
   node.style.height = height;
   node.style.backgroundColor = color;
+
+  node.style.alignItems = "center";
+  node.style.display = "flex";
+  node.style.justifyContent = "center";
   
   if (margin) node.style.margin = margin;
   if (padding) node.style.padding = padding;
   if (child) node.appendChild(child);
+  animations.forEach(anim => node.classList.add(anim));
   return node;
 }
 
@@ -230,4 +248,23 @@ function Menu({ children = [], side = "right", width = "200px", background = "rg
   document.body.appendChild(node);
 
   return toggle;
+}
+
+function FlexRow({children = [], gap = "10px", align = "center", justify = "center", padding, margin}) {
+  //if mobile, returns a column
+  //if not, returns row
+  if (isMobile()) {
+    return Column({children, gap, align, justify, padding, margin});
+  }
+  return Row({children, gap, align, justify, padding, margin});
+}
+
+function SidePadding({child, width="5px"}) {
+  return Row({
+    children: [
+      SizedBox({width: width, height: "10px"}),
+      child,
+      SizedBox({width: width, height: "10px"})
+    ]
+  });
 }
