@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" prefix="https://swhsscioly.github.io/">
+  <html prefix="og: https://ogp.me/ns#">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <meta property="og:description" content="Official website of the South Windsor High School Science Olympiad team" />
+  <meta property="og:site_name" content="South Windsor High School Science Olympiad"/>
+  <meta property="og:title" content="South Windsor High School Science Olympiad"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://swhsscioly.github.io/">
+  <meta property="og:image" itemprop="image" content="https://swhsscioly.github.io/images/Cornell-2023-Images/IMG_2174.jpg"/>
+  <meta name="google-site-verification" content="YhW25V12fiiAK3tTEAdbUr_Ftli6Obn5FsZ5jIRbbF0" />
+  <meta name="description" content="The official site of the South Windsor High School Science Olympiad Team. This webpage has detailed information related to our upcoming 2026 SWHS invitational."/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="South Windsor High School Science Olympiad" content="Website">
+    <link rel="sitemap" type="applications/xml" title="sitemap" href="sitemap.xml">
+    <title>South Windsor High School Science Olympiad </title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/bootstrap.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles/reset.css">
+   <link rel="stylesheet" href="styles/style.css"> 
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/favicon.ico">
+    <meta http-equiv="X-Frame-Options" content="deny">  
+    <style>
+
+.carousel-control-prev-icon {
+ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23561c31' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23561c31' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+@media (max-width:1660px)
+  #the_block{
+    margin-top: 20px;
+  }
+}
+      @keyframes moveToLeft {
+  0% {
+      transform: translateX(-1000px);
+  }
+  100% {
+      transform: translateX(0px);
+  }
+}
+
+.slideshown {width:100%; margin-right: auto; margin-left: auto; height:17vw}
+.slideshown img{
+  height: 17vw; max-width:70% ;object-fit: contain; margin-left: auto; 
+  margin-right: auto; margin-top: auto; margin-bottom: auto;
+}
+
+@media (min-width:600px){
+  .slideshown {width:100%; margin-right: auto; margin-left: auto; height:10vw}
+.slideshown img{
+  height: 10vw; max-width:500px ;object-fit: contain; margin-left: auto; 
+  margin-right: auto; margin-top: auto; margin-bottom: auto;
+}
+}
+
+
+@keyframes movetoRight {
+  0% {
+      transform: translateX(1000px);
+  }
+  100% {
+      transform: translateX(0px);
+  }
+}
+
+      footer {margin-right: 10px; margin-top: 10px}
+      .the_description, .O-Block {padding-right: 24px; padding-left: 24px; padding-top: 14px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: black; font-size: 1.5rem; line-height: 2.1rem;}
+    
+   @media (max-width:500) {
+
+   }
+    </style>
+</head> 
+<body>
+ <div class="image-container-homepage", id="image_container">
+    <div class="nav-bar" id= "nav-bar-modern">
+      <script src = "components.js"></script>
+      <script src = "navbar.js"></script>
+      <script>
+        document.getElementById("nav-bar-modern").appendChild(
+          BuildNavBar("Leadership")
+        );
+      </script>
+    </div>
+  
+      <div id = "content">
+          <script>
+            function personBoxBuilder(photo_src, name, desc, email) {
+              let contact = email ? [Button({
+                height: "0.1em",
+                padding: "0px",
+                margin: "0px",
+                child: Text({
+                  text: "✉",
+                  font: ["Georgia"],
+                  variant: "body-medium",
+                  color: "blue"
+                }),
+                onClick: () => window.open("https://gmail.com", "_blank")
+              })] : [];
+
+              return Column({
+                children: [
+                  Image({
+                    src: photo_src,
+                    alt: `Our ${desc}, ${name}`,
+                    height: "5em",
+                    borderRadius: "0.5em",
+                    animations: ["fadeInPopImage"],
+                    border: "5px solid maroon"
+                  }),
+                  Text({
+                    text: name,
+                    font: ["Georgia"],
+                    variant: "headline-medium",
+                    align: "middle",
+                    whiteSpace: "pre-wrap"
+                  }),
+                  Text({
+                    text: desc,
+                    font: ["Georgia"],
+                    variant: "body-medium",
+                    whiteSpace: "pre-wrap",
+                    align: "middle"
+                  }),
+                  ...contact
+                ]
+              });
+            }
+            document.getElementById("content").append(
+              SidePadding({
+                child: Column({
+                children: [
+                  SizedBox({height: "1em"}),
+                  Text({
+                    text: "Leadership",
+                    variant: "headline-large",
+                    color: "maroon",
+                    font: "Roboto"
+                  }),
+                  Line({
+                    color: "maroon",
+                    width: "80%",
+                  }),
+                  Text({
+                    text: "Thank you to all our Coaches and Captains -- past and present!\nWe really couldn't have done it without you!",
+                    variant: "body-medium",
+                    color: "maroon",
+                    font: ["Georgia"],
+                    whiteSpace: "pre-wrap",
+                    align: "center"
+                  }),
+                  SizedBox({height: "1em"}),
+                  Text({
+                    text: "Coach & Captain",
+                    variant: "headline-medium",
+                    font: ["Georgia"]
+                  }),
+                  Line({width: "60%", color: "grey"}),
+                  FlexRow({
+                    children: [
+                      personBoxBuilder("images/leadership-2026/SCI-Kraus.jpg", "Joshua Kraus", "Team Coach\nFaculty Advisor", "mailto:jkraus@swindsor.k12.ct.us"), 
+                      personBoxBuilder("images/leadership-2026/IMG-20250902-WA0021.jpg", "Sanjana Kadiyala", "Team Captain\n\n", "mailto:sk30648@southwindsorschools.org"),
+                    ],
+                    gap: "1em"
+                  }),
+                  SizedBox({height: "1em"}),
+                  Text({
+                    text: "Associate Captains",
+                    variant: "headline-medium",
+                    font: ["Georgia"]
+                  }),
+                  Line({width: "60%", color: "grey"}),
+                  FlexRow({
+                    children: [
+                      personBoxBuilder("images/leadership-2026/IMG-20250902-WA0024.jpg", "Caleb\nBeaulieu", "Associate Captain"), 
+                      personBoxBuilder("images/leadership-2026/IMG-20250902-WA0022.jpg", "Maher\nMawla", "Associate Captain"), 
+                      personBoxBuilder("images/leadership-2026/IMG-20250902-WA0020.jpg", "Dhanya\nSanakkayala", "Associate Captain"), 
+                      personBoxBuilder("images/leadership-2026/IMG-20250902-WA0023.jpg", "Akhil\nShunmugaraja", "Associate Captain")
+                    ]
+                  })
+                ],
+                gap: "0em"
+                }),
+                width: "5px"
+              })
+            );
+          </script>
+          <script>
+          
+
+          const imgs = document.querySelectorAll('.fadeInPopImage');
+          let pause = false;
+
+          function onScroll() {
+            imgs.forEach(img => {
+              if (pause) return;
+              const rect = img.getBoundingClientRect();
+              if (rect.bottom < window.innerHeight && !img.classList.contains('show')) {
+                img.classList.add('show');
+              }
+            });
+          }
+
+          window.addEventListener('scroll', onScroll);
+          onScroll();
+          </script>
+      </div>
+        
+  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
+<footer>
+  <img src="images/Footer_Image-removebg-preview.png" class="footer_img" alt="The SWHS Logo of a Bobcat. This is also the logo of our Science Olympiad Team.">
+
+  <p class="Address" style="color:white; text-decoration: underline; font-weight: normal;"><a style="color:white;" target="_blank" href="https://highschool.southwindsorschools.org/"> South Windsor High School Science Olympiad</a></p>
+    <p class="Address" style="font-size: 1.35rem; font-weight: lighter; line-height: 1.7rem;"> 161 Nevers Road <br>South Windsor<br> CT 06074</p>
+                
+   
+    <p style="line-height: 1.5rem;padding-top:20px; color:#ffe49c; text-align: left; margin-bottom: 7px;", id="year">
+        <script>
+          let content = document.getElementById("year");
+          content.innerHTML = "&copy; 2023-" + new Date().getFullYear() + "<br>Aditya Jha";
+        </script>
+    <p style="line-height: 1.5rem;padding-top:0px; color:#ffe49c; text-align: left;padding-bottom: 10px;"><br>All Rights Reserved</p>
+</footer>
+    </div>
+</html>
+ 
