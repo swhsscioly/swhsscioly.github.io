@@ -21,24 +21,22 @@ let typographyVariants;
 
 if (isMobile()) {
   typographyVariants = {
-    "navbar": {fontSize: "20px", fontWeight: "50", lineHeight: "10px"},
-    "body-small":  { fontSize: "13px", fontWeight: "40", lineHeight: "15px" },
-    "body-medium": { fontSize: "15px", fontWeight: "50", lineHeight: "18px" },
-    "headline-small": { fontSize: "20px", fontWeight: "600", lineHeight: "20px" },
-    "headline-large": { fontSize: "30px", fontWeight: "800", lineHeight: "30px" },
-    "headline-xlarge": {fontSize: "30px", fontWeight: "800", lineHeight: "30px" },
-    "headline-medium": { fontSize:  "20px", fontWeight: "600", lineHeight: "20px" }         
+    "navbar": {fontSize: "20px", fontWeight: "50", lineHeight: "10px", font: "Georgia"},
+    "body-small":  { fontSize: "13px", fontWeight: "40", lineHeight: "15px", font: "Georgia" },
+    "body-medium": { fontSize: "15px", fontWeight: "50", lineHeight: "18px", font: "Georgia"},
+    "headline-small": { fontSize: "20px", fontWeight: "600", lineHeight: "20px", font: "Georgia" },
+    "headline-medium": { fontSize : "60px", fontWeight: "600", lineHeight: "60px", font: "Roboto"},
+    "headline-large": { fontSize: "30px", fontWeight: "600", lineHeight: "20px", font: "Roboto" }
   };
 }
 else {
   typographyVariants = {
-    "navbar": {fontSize: "20px", fontWeight: "50", lineHeight: "10px"},
-    "body-small":  { fontSize: "23px", fontWeight: "40", lineHeight: "30px" },
-    "body-medium": { fontSize: "25px", fontWeight: "50", lineHeight: "25px" },
-    "headline-small": { fontSize: "30px", fontWeight: "600", lineHeight: "30px" },
-    "headline-large": { fontSize: "70px", fontWeight: "800", lineHeight: "75px" },
-    "headline-xlarge": {fontSize: "70px", fontWeight: "800", lineHeight: "75px" },
-    "headline-medium": { fontSize:  "35px", fontWeight: "600", lineHeight: "30px" }
+    "navbar": {fontSize: "20px", fontWeight: "50", lineHeight: "10px", font: "Georgia"},
+    "body-small":  { fontSize: "23px", fontWeight: "40", lineHeight: "30px", font: "Georgia" },
+    "body-medium": { fontSize: "25px", fontWeight: "50", lineHeight: "25px", font: "Georgia" },
+    "headline-small": { fontSize: "30px", fontWeight: "600", lineHeight: "30px", font: "Georgia" },
+    "headline-medium": { fontSize: "60px", fontWeight: "600", lineHeight: "60px", font: "Roboto" },
+    "headline-large": { fontSize: "70px", fontWeight: "800", lineHeight: "75px", font: "Roboto" }
   };
 }
 
@@ -61,10 +59,11 @@ function Text(options) {
   node.style.fontSize = style.fontSize;
   node.style.fontWeight = style.fontWeight;
   node.style.lineHeight = style.lineHeight;
+  node.style.fontFamily = style.font;
+
   node.style.textAlign = align;
-  
+
   if (color) node.style.color = color;
-  node.style.fontFamily = font;
 
   node.textContent = text;
   node.style.whiteSpace = whiteSpace;
@@ -142,7 +141,7 @@ function Image({id="", src, alt = "", width, height, objectFit = "cover", border
   return node; 
 }
 
-function Row({ children = [], gap = "10px", align = "center", justify = "center", padding, margin}) {
+function Row({ id = "", children = [], gap = "10px", align = "center", justify = "center", padding, margin}) {
   const node = document.createElement("div");
   node.style.display = "flex";
   node.style.flexDirection = "row";
@@ -150,7 +149,7 @@ function Row({ children = [], gap = "10px", align = "center", justify = "center"
   node.style.alignItems = align; // vertical alignment
   node.style.justifyContent = justify; // horizontal alignment
 
-
+  if (id) node.id = id;
   if (padding) node.style.padding = padding;
   if (margin) node.style.margin = margin;
 
@@ -161,14 +160,14 @@ function Row({ children = [], gap = "10px", align = "center", justify = "center"
   return node;
 }
 
-function Column({ children = [], gap = "10px", align = "center", justify = "center", padding, margin}) {
+function Column({ id = "",  children = [], gap = "10px", align = "center", justify = "center", padding, margin}) {
   const node = document.createElement("div");
   node.style.display = "flex";
   node.style.flexDirection = "column";
   node.style.gap = gap;               // space between elements
   node.style.alignItems = align;      // horizontal alignment
   node.style.justifyContent = justify; // vertical alignment
-
+  if (id) node.id = id;
   if (padding) node.style.padding = padding;
   if (margin) node.style.margin = margin;
 
@@ -250,13 +249,13 @@ function Menu({ children = [], side = "right", width = "200px", background = "rg
   return toggle;
 }
 
-function FlexRow({children = [], gap = "10px", align = "center", justify = "center", padding, margin}) {
+function FlexRow({id="", children = [], gap = "10px", align = "center", justify = "center", padding, margin}) {
   //if mobile, returns a column
   //if not, returns row
   if (isMobile()) {
-    return Column({children, gap, align, justify, padding, margin});
+    return Column({id, children, gap, align, justify, padding, margin});
   }
-  return Row({children, gap, align, justify, padding, margin});
+  return Row({id, children, gap, align, justify, padding, margin});
 }
 
 function SidePadding({child, width="5px"}) {
@@ -266,5 +265,5 @@ function SidePadding({child, width="5px"}) {
       child,
       SizedBox({width: width, height: "10px"})
     ]
-  });
+  })
 }

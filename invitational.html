@@ -89,6 +89,7 @@
     <div class="nav-bar" id= "nav-bar-modern">
       <script src = "components.js"></script>
       <script src = "navbar.js"></script>
+      <script src = "sheets_fetcher.js"></script>
       <script>
         document.getElementById("nav-bar-modern").appendChild(
           BuildNavBar("Invitational")
@@ -98,18 +99,42 @@
   
       <div id = "content" class = "fullscreen">
           <script>
+            async function fetchResources() {
+              const v = await fetchProcessData();
+              for (const i of v) {
+                document.getElementById("btnBar").append(
+                  new Button({
+                    child: new Text({
+                     align: "middle",
+                      text: i[0],
+                      variant: "body-medium",
+                      font: "Roboto",
+                      color: "",
+                      whiteSpace: "nowrap"
+                    }),
+                    onClick: () => window.open(i[1], '_blank'),
+                    animations: ["hoverAnimB"],
+                    border: "2px solid maroon",
+                    backgroundColor: "",
+                    width: `${100/v.length-5}vw`
+                  })
+                )
+              }
+
+            }
             document.getElementById("content").append(
               Column({
                 children: [
-                  FlexRow({
-                    children: [
-                      SizedBox({
-                        color:"maroon",
-                        width: "50vw",
-                        height: "12em",
-                        animations: ["slideLeftBox"],
-                        child: Column({
-                          children: [
+                  SizedBox({
+                    color:"maroon",
+                    width: "100%",
+                    height: "12em",
+                    animations: ["slideLeftBox"],
+                    child: FlexRow({
+                      children: [
+                        SizedBox({
+                          child: Column({
+                            children: [
                             Text({
                               align: "middle",
                               text: "SWHS Invitational",
@@ -134,88 +159,69 @@
                             Line({width: "10%", color: "#FFFFC5"}),
                             Text({
                               align: "middle",
-                              text: "Registration is open",
+                              text: "Register Now!",
                               variant: "body-medium",
                               color: "#FFFFC5"
                             })
                           ],
-                          justify: "center",
-                          gap: "0.1em"
+                            justify: "center",
+                            gap: "0.1em"
+                          }),
+                          color: "transparent",
+                          width: "50vw"
                         }),
-                      }),
-                      SizedBox({
-                        color:"#FFFFC5",
-                        width: "50vw",
-                        height: "12em",
-                        child: Image({
-                          src: "images/South_Windsor_High_School.JPG",
-                          alt: "The main entrance of South Windsor High School",
-                          width: "40vw",
-                          border: "4px solid maroon",
-                          animations: ["fadeInPopImage"]
-                        }),
-                        animations: ["slideRightBox"]
-                      })
-                     ],
-                    gap: "0px",
+                        Image({
+                            src: "images/South_Windsor_High_School.JPG",
+                            alt: "The main entrance of South Windsor High School",
+                            width: "50vw",
+                            border: "4px solid #FFFFC5",
+                            animations: ["fadeInPopImage"]
+                        })
+                      ],
+                      gap: "10vw",
+                      margin: "0px",
+                      justify: "center"
+                    }),
+                  }),
+                  SizedBox({
+                    child: FlexRow({children: [], id: "btnBar", margin:"0.1em"}),
+                    color: "#FFFFC5",
+                    width: "100vw"
                   }),
                   SizedBox({height: "20px"}),
-                  FlexRow({
+                  SidePadding({
+                    child: Column({
                     children: [
                       SizedBox({width: "15px"}),
-                      SizedBox({
-                        child: Column({
-                          children: [
-                            Text({
-                              text: "About the SWHS Invitational",
-                              variant: "headline-small",
-                              font: "Georgia"
-                            }),
-                            Text({
-                              text: "Registration for our 2nd SWHS Science Olympiad Invitational is open now! Teams from all over New England will be competing in the 23 Division C events. Exams will be written and events will be proctored by experienced South Windsor High School Alumni and members of our 2025 Nationals team.",
-                              variant: "body-medium",
-                              font: "Georgia",
-                              border: "2px solid #FFFFC5",
-                              text: "Past Invitational",
-                              variant: "headline-small",
-                              font: "Georgia"
-                            }),
-                            Line({width: "80%"}),
-                            Text({
-                              text: "Last year we held our first SWHS invitational, containing 19 teams from acress New England. It was a major sucess, going extremely smoothly throughout. Congrats to John Jay High School for winning the first-ever SWHS invitational! We are using the insights gained from our last invitational to make the next one even smoother and quicker this year.",
-                              variant: "body-medium",
-                              font: "Georgia"
-                            })
-                          ]
-                        }),
-                        width: "45vw"
+                      Text({
+                        text: "About the SWHS Invitational",
+                        variant: "headline-small",
+                        font: "Georgia"
                       }),
-                      Line({height: "10em", width: "2px", margin: "10px"}),
-                      SizedBox({
-                        child: Column({
-                          children: [
-                            Text({
-                              text: "Important Information",
-                              variant: "headline-small",
-                              font: "Georgia"
-                            }),
-                            Line({width: "80%"}),
-                            Text({
-                              text: "This section will be updated as soon as we finish compiling important competition resources.",
-                              variant: "body-medium",
-                              font: "Georgia"
-                            })
-                          ]
-                        }),
-                        width: "45vw"
+                      Text({
+                        text: "Registration for our 2nd SWHS Science Olympiad Invitational is open now! Teams from all over New England will be competing in the 23 Division C events. Exams will be written and events will be proctored by experienced South Windsor High School Alumni and members of our 2025 Nationals team.",
+                        variant: "body-medium",
+                        font: "Georgia",
+                        border: "2px solid #FFFFC5",
+                        text: "Past Invitational",
+                        variant: "headline-small",
+                        font: "Georgia"
+                      }),
+                      Line({width: "80%"}),
+                      Text({
+                        text: "Last year, we hosted the inaugural SWHS Invitational, featuring 19 teams from across New England. The event was a resounding success, running seamlessly from start to finish. Congratulations to John Jay High School on winning the first-ever SWHS Invitational! We are leveraging the insights gained from last year’s event to make this year’s invitational even more efficient and well-organized.",
+                        variant: "body-medium",
+                        font: "Georgia"
                       })
-                    ]
+                     ]
+                    })
                   }),
                   SizedBox({width: "20px"})
                 ],
                 gap: "0px",
               })
             );
+            fetchResources();
           </script>
           <script>
           
