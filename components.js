@@ -171,7 +171,7 @@ function Column({ id = "",  children = [], gap = "10px", align = "center", justi
   if (padding) node.style.padding = padding;
   if (margin) node.style.margin = margin;
 
-  children.forEach(child => node.append(child));
+  children.forEach(child => node.append(child))
 
   return node;
 }
