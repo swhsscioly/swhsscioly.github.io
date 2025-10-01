@@ -40,7 +40,7 @@ function BuildNavBarWidget(widget_str, selected) {
               gap: "0.5em",
           })
         ],
-        background: "rgba(32, 32, 32, 0.9)"
+        background: "rgba(32, 32, 32, 0.8)"
       });
       document.body.append(
         Button({
@@ -88,7 +88,7 @@ function BuildNavBarWidget(widget_str, selected) {
 }
 function BuildNavBar(selected) { 
   return SizedBox({
-    color: "rgba(32, 32, 32, 0.9)",
+    color: "rgba(32, 32, 32, 0.8)",
     margin: "0px",
     child: Row({
     children: ((isMobile()) ? navbar_widgets_phone : navbar_widgets_laptop).map(widget => BuildNavBarWidget(widget, selected)),
