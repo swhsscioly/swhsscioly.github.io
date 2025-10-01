@@ -25,15 +25,15 @@ if (isMobile()) {
     "body-small":  { fontSize: "13px", fontWeight: "40", lineHeight: "15px", font: "Georgia" },
     "body-medium": { fontSize: "15px", fontWeight: "50", lineHeight: "18px", font: "Georgia"},
     "headline-small": { fontSize: "20px", fontWeight: "600", lineHeight: "20px", font: "Georgia" },
-    "headline-medium": { fontSize : "60px", fontWeight: "600", lineHeight: "60px", font: "Roboto"},
-    "headline-large": { fontSize: "30px", fontWeight: "600", lineHeight: "20px", font: "Roboto" }
+    "headline-medium": { fontSize : "30px", fontWeight: "600", lineHeight: "30px", font: "Roboto"},
+    "headline-large": { fontSize: "30px", fontWeight: "600", lineHeight: "30px", font: "Roboto" }
   };
 }
 else {
   typographyVariants = {
     "navbar": {fontSize: "20px", fontWeight: "50", lineHeight: "10px", font: "Georgia"},
     "body-small":  { fontSize: "23px", fontWeight: "40", lineHeight: "30px", font: "Georgia" },
-    "body-medium": { fontSize: "25px", fontWeight: "50", lineHeight: "25px", font: "Georgia" },
+    "body-medium": { fontSize: "25px", fontWeight: "50", lineHeight: "30px", font: "Georgia" },
     "headline-small": { fontSize: "30px", fontWeight: "600", lineHeight: "30px", font: "Georgia" },
     "headline-medium": { fontSize: "60px", fontWeight: "600", lineHeight: "60px", font: "Roboto" },
     "headline-large": { fontSize: "70px", fontWeight: "800", lineHeight: "75px", font: "Roboto" }
@@ -258,12 +258,12 @@ function FlexRow({id="", children = [], gap = "10px", align = "center", justify 
   return Row({id, children, gap, align, justify, padding, margin});
 }
 
-function SidePadding({child, width="5px"}) {
+function SidePadding({child, width="5%"}) {
   return Row({
     children: [
-      SizedBox({width: width, height: "10px"}),
+      SizedBox({width: width, height: "5%"}),
       child,
-      SizedBox({width: width, height: "10px"})
+      SizedBox({width: width, height: "5%"})
     ]
   })
 }

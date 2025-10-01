@@ -168,17 +168,22 @@
                             gap: "0.1em"
                           }),
                           color: "transparent",
-                          width: "50vw"
+                          width: isMobile() ? "100vw" : "48vw"
                         }),
-                        Image({
+                        ...[SizedBox({width: "0vw", height: "1em", color: "transparent"})],
+                        SizedBox({
+                          child: Image({
                             src: "images/South_Windsor_High_School.JPG",
                             alt: "The main entrance of South Windsor High School",
-                            width: "50vw",
                             border: "4px solid #FFFFC5",
+                            height: isMobile() ? "5em" : "8em",
                             animations: ["fadeInPopImage"]
+                          }),
+                          width: isMobile() ? "100vw" : "48vw",
+                          color: "transparent"
                         })
                       ],
-                      gap: "10vw",
+                      gap: "0px",
                       margin: "0px",
                       justify: "center"
                     }),
@@ -188,7 +193,7 @@
                     color: "#FFFFC5",
                     width: "100vw"
                   }),
-                  SizedBox({height: "20px"}),
+                  SizedBox({height: "20px", color: "transparent"}),
                   SidePadding({
                     child: Column({
                     children: [
@@ -214,7 +219,7 @@
                         font: "Georgia"
                       })
                      ]
-                    })
+                    }),
                   }),
                   SizedBox({width: "20px"})
                 ],
