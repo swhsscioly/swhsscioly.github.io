@@ -18,7 +18,7 @@ async function fetchProcessData() {
     ]);
 
     var result = data.filter(r => r[2] === "Yes").map(r => [r[0], r[1]]);
-    if (result == []) {
+    if (result.length == 0) {
       return [["General Info", "https://docs.google.com/document/d/1Y_XDXPSnIZ-nqElenfrqkj9lGlP7dRmJjgecJvEKlrY/edit?tab=t.0"]];
     }
   } catch {
