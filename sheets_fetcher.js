@@ -17,7 +17,10 @@ async function fetchProcessData() {
       new Promise((_, r) => setTimeout(() => r("timeout"), 5000))
     ]);
 
-    return data.filter(r => r[2] === "Yes").map(r => [r[0], r[1]]);
+    var result = data.filter(r => r[2] === "Yes").map(r => [r[0], r[1]]);
+    if (result == []) {
+      return [["General Info", "https://docs.google.com/document/d/1Y_XDXPSnIZ-nqElenfrqkj9lGlP7dRmJjgecJvEKlrY/edit?tab=t.0"]];
+    }
   } catch {
     return [["General Info", "https://docs.google.com/document/d/1Y_XDXPSnIZ-nqElenfrqkj9lGlP7dRmJjgecJvEKlrY/edit?tab=t.0"]];
   }
