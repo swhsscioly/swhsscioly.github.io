@@ -1,5 +1,5 @@
 async function fetchData() {
-  const url = "https://corsproxy.io/https://docs.google.com/spreadsheets/d/e/2PACX-1vShLix4SLBGRaIInfZdSZl7yiVqOUZaVju3QS3ct_2znOVl9rXNgjd28P9yNnXBNmqulXxtHJMTo6LC/pub?gid=0&single=true&output=csv&_=" + new Date().getTime();
+  const url = "https://thingproxy.freeboard.io/fetch/https://docs.google.com/spreadsheets/d/e/2PACX-1vShLix4SLBGRaIInfZdSZl7yiVqOUZaVju3QS3ct_2znOVl9rXNgjd28P9yNnXBNmqulXxtHJMTo6LC/pub?gid=0&single=true&output=csv&_=" + new Date().getTime();
   const response = await fetch(url);
   const text = await response.text();
   return text.trim().split("\n").map(r => r.split(","));
