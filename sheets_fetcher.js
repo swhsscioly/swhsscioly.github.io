@@ -11,14 +11,16 @@ async function fetchData() {
 }
 
 async function fetchProcessData() {
-  var result = [];
-  const data = await fetchData();
-  for (const row of data) {
-    if (row[2] == "Yes") {
-      result.push([row[0], row[1]]);
-    }
+  try {
+    const data = await Promise.race([
+      fetchData(),
+      new Promise((_, r) => setTimeout(() => r("timeout"), 5000))
+    ]);
+
+    return data.filter(r => r[2] === "Yes").map(r => [r[0], r[1]]);
+  } catch {
+    return [["General Info", "https://docs.google.com/document/d/1Y_XDXPSnIZ-nqElenfrqkj9lGlP7dRmJjgecJvEKlrY/edit?tab=t.0"]];
   }
-  
-  return result;
 }
+
 
