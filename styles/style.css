@@ -145,6 +145,26 @@ nav a {margin-left:5px}
   z-index: -10;
 }
 
+.carouselHolder {
+  position: relative;
+}
+.leftOverlay {
+  position: relative;
+  left: 0px;
+  top: 0px;
+
+  height: 100%;
+  width: 25%;
+  z-index: 2;
+  background: linear-gradient(to right, #FFFFC5, transparent);
+}
+
+.rightOverlay {
+  position: relative;
+  right: 0px;
+  background: linear-gradient(to left, #FFFFC5, transparent);
+}
+
 @keyframes slideRightAnim {
   from {
     transform: translateX(100%);

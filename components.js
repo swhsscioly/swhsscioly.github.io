@@ -107,8 +107,13 @@ function Button(options) {
   node.style.borderRadius = typeof borderRadius === "number" ? `${borderRadius}px` : borderRadius;
   if (width) node.style.width = width;
   if (height) node.style.height = height;
-  if (backgroundColor) node.style.backgroundColor = backgroundColor;
-
+  if (backgroundColor) {
+    if (backgroundColor.startsWith("linear-gradient") || backgroundColor.startsWith("radial-gradient")) {
+      node.style.background = backgroundColor;
+    } else {
+      node.style.backgroundColor = backgroundColor;
+    }
+  }
   node.style.display = "flex";
   node.style.justifyContent = "center";
   node.style.alignItems = "center";
@@ -212,6 +217,13 @@ function SizedBox({
   if (margin) node.style.margin = margin;
   if (padding) node.style.padding = padding;
   if (child) node.appendChild(child);
+  if (color) {
+    if (color.startsWith("linear-gradient") || color.startsWith("radial-gradient")) {
+      node.style.background = color;
+    } else {
+      node.style.backgroundColor = color;
+    }
+  }
   animations.forEach(anim => node.classList.add(anim));
   return node;
 }
@@ -266,4 +278,70 @@ function SidePadding({child, width="5%"}) {
       SizedBox({width: width, height: "5%"})
     ]
   })
+}
+
+function Carousel({id = "", images}) {
+  let index = 0;
+  let leftButton = SizedBox({
+    child: Row({
+      children: [
+        Button({
+          child: Text({
+          text: "⮜",
+            color: "",
+            variant: "headline-small",
+          }),
+          animations: ["navHoverAnim"],
+          backgroundColor: "transparent",
+          onClick: () => {
+            console.log("previous");
+          }, 
+        }),
+      ]
+    }),
+    width: "20%",
+    height: "6em",
+    color: "#a24857"
+  });
+  let rightButton = SizedBox({
+    child: Button({
+      child: Text({
+      text: "⮞",
+        color: "",
+        variant: "headline-small",
+      }),
+      animations: ["navHoverAnim"],
+      backgroundColor: "transparent",
+      onClick: () => {
+        console.log("next");
+      }, 
+    }),
+    width: "20%",
+    height: "6em",
+    color: "#a24857"
+  });
+
+
+  return Row({
+    children: [
+      leftButton,
+      SizedBox({
+        width:"30%", 
+        color: "linear-gradient(to right, #a24857, white)",
+        height: "6em"
+      }),
+      Image({
+        id: id+"'s displayed image",
+        src: images[index],
+        height: "6em"
+      }),
+      SizedBox({
+        width:"30%", 
+        color: "linear-gradient(to left, #a24857, white)",
+        height: "6em"
+      }),
+      rightButton
+    ],
+    gap: "0px"
+  });
 }
