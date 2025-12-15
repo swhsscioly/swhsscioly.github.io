@@ -132,7 +132,7 @@
                 color: "#FFFFC5",
                 animations: ["theFade"],
               }),
-              ...(!isMobile()) ? [
+              ...(!isMobile() ? [
                 Text({
                   id: "banner",
                   text: "Connecticut's Science Olympiad Champion",
@@ -142,8 +142,8 @@
                   animations: ["theFade"],
                   font: "Roboto"
                 })
-                ] : [],
-              ...(!isMobile()) ? [Row({ children: [Button({
+                ] : []),
+              ...(!isMobile() ? [Row({ children: [Button({
                 child: Text({
                   text: "Show More",
                   align: "center",
@@ -161,7 +161,7 @@
                 border: "2px solid #FFFFC5",
                 animations: ["showMoreHoverAnim"],
                 onClick: () => window.scrollTo({top: document.getElementById("image_container").offsetHeight, left: 0, behavior: 'smooth'}),
-              }), invyButton] : [invyButton]
+              }), invyButton] : [invyButton])
             ]
           }));
         }
@@ -487,6 +487,7 @@
 </footer>
     </div>
 </html>
+
 
 
 
