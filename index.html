@@ -123,7 +123,7 @@
                 onClick: () => window.scrollTo({top: document.getElementById("image_container").offsetHeight, left: 0, behavior: 'smooth'}),
               });
           
-          document.getElementById("c").appendChild(Column({
+          document.getElementById("c").appendChild(Column({ children: [
               Text({
                 id: "banner",
                 text: "— SWHS Science Olympiad —",
@@ -161,7 +161,7 @@
                 border: "2px solid #FFFFC5",
                 animations: ["showMoreHoverAnim"],
                 onClick: () => window.scrollTo({top: document.getElementById("image_container").offsetHeight, left: 0, behavior: 'smooth'}),
-              }), invyButton] : [invyButton])
+              }), invyButton]})] : [invyButton])
             ]
           }));
         }
@@ -487,6 +487,7 @@
 </footer>
     </div>
 </html>
+
 
 
 
