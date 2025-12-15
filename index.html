@@ -103,16 +103,36 @@
     <div class = "centered" id="c">
       <script>
         function main(){
+          var invyButton = Button({
+                child: Text({
+                  text: "Invitational",
+                  align: "center",
+                  color: "",
+                  variant: "body-medium",
+                  animations: ["theFade"],
+                  font: "Roboto"
+                }),
+                align: "center",
+                animations: ["theFade"],
+                height: "50px",
+                padding: "10px",
+                margin: "0px",
+                backgroundColor: "",
+                border: "2px solid #FDE992",
+                animations: ["showMoreHoverAnim"],
+                onClick: () => window.scrollTo({top: document.getElementById("image_container").offsetHeight, left: 0, behavior: 'smooth'}),
+              }
+          
           document.getElementById("c").appendChild(Column({
-            children: [
-              ...(!isMobile()) ? [Text({
+              Text({
                 id: "banner",
-                text: "— South Windsor High School —",
+                text: "— SWHS Science Olympiad —",
                 variant: "headline-small",
                 align: "center",
                 color: "#FFFFC5",
                 animations: ["theFade"],
-              })] : [],
+              }),
+              ...(!isMobile()) ? [Row({
               Text({
                 id: "banner",
                 text: "Connecticut's Science Olympiad Champion",
@@ -121,8 +141,8 @@
                 color: "white",
                 animations: ["theFade"],
                 font: "Roboto"
-              }),
-              ...(!isMobile()) ? [Button({
+              })] ... [],
+              ...(!isMobile()) ? [Row({ children: [Button({
                 child: Text({
                   text: "Show More",
                   align: "center",
@@ -140,7 +160,7 @@
                 border: "2px solid #FFFFC5",
                 animations: ["showMoreHoverAnim"],
                 onClick: () => window.scrollTo({top: document.getElementById("image_container").offsetHeight, left: 0, behavior: 'smooth'}),
-              })] : []
+              }), invyButton] : [invyButton]
             ]
           }));
         }
@@ -466,6 +486,7 @@
 </footer>
     </div>
 </html>
+
 
 
 
