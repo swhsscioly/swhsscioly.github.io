@@ -132,16 +132,17 @@
                 color: "#FFFFC5",
                 animations: ["theFade"],
               }),
-              ...(!isMobile()) ? [Row({
-              Text({
-                id: "banner",
-                text: "Connecticut's Science Olympiad Champion",
-                variant: "headline-large",
-                align: "center",
-                color: "white",
-                animations: ["theFade"],
-                font: "Roboto"
-              })] ... [],
+              ...(!isMobile()) ? [
+                Text({
+                  id: "banner",
+                  text: "Connecticut's Science Olympiad Champion",
+                  variant: "headline-large",
+                  align: "center",
+                  color: "white",
+                  animations: ["theFade"],
+                  font: "Roboto"
+                })
+                ] : [],
               ...(!isMobile()) ? [Row({ children: [Button({
                 child: Text({
                   text: "Show More",
@@ -486,6 +487,7 @@
 </footer>
     </div>
 </html>
+
 
 
 
