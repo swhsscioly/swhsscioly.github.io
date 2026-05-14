@@ -2,7 +2,7 @@
 //ensure each title has a coressponding page (if no file yet, just use an empty string)
 //two buttons with identical names will not be able to lead to different page_files
 const pages_titles = ["Home", "Leadership", "Invitational", "Gallery", "Sponsors", "Contact"];
-const page_files = ["index.html", "contact.html", "invitational.html", "photos.html", "sponsors.html", "contact_us.html"];
+const page_files = ["index.html", "leadership.html", "invitational.html", "photos.html", "sponsors.html", "contact_us.html"];
 
 //do not modify unless you know what you're doing
 const navbar_widgets_laptop = ["padding", "logo", "SWHS text", "fill", ...pages_titles, "padding"];
@@ -40,7 +40,7 @@ function BuildNavBarWidget(widget_str, selected) {
               gap: "0.5em",
           })
         ],
-        background: "rgba(32, 32, 32, 0.9)"
+        background: "rgba(32, 32, 32, 0.8)"
       });
       document.body.append(
         Button({
@@ -88,7 +88,7 @@ function BuildNavBarWidget(widget_str, selected) {
 }
 function BuildNavBar(selected) { 
   return SizedBox({
-    color: "rgba(32, 32, 32, 0.9)",
+    color: "rgba(32, 32, 32, 0.8)",
     margin: "0px",
     child: Row({
     children: ((isMobile()) ? navbar_widgets_phone : navbar_widgets_laptop).map(widget => BuildNavBarWidget(widget, selected)),
