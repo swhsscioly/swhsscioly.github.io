@@ -105,7 +105,7 @@
         function main(){
           var invyButton = Button({
                 child: Text({
-                  text: "2027",
+                  text: "2027 Invitational",
                   align: "center",
                   color: "",
                   variant: "body-medium",
@@ -120,7 +120,9 @@
                 backgroundColor: "",
                 border: "2px solid #FDE992",
                 animations: ["showMoreHoverAnim"],
-                onClick: () => window.scrollTo({top: document.getElementById("image_container").offsetHeight, left: 0, behavior: 'smooth'}),
+                onClick: () => {
+    window.location.href = "/invitational.html";
+  },
               });
           
           document.getElementById("c").appendChild(Column({ children: [
