@@ -281,66 +281,46 @@ function SidePadding({child, width="5%"}) {
 }
 
 function Carousel({id = "", images}) {
-  let index = 0;
-  let leftButton = SizedBox({
-    child: Row({
-      children: [
-        Button({
-          child: Text({
-          text: "⮜",
-            color: "",
-            variant: "headline-small",
-          }),
-          animations: ["navHoverAnim"],
-          backgroundColor: "transparent",
-          onClick: () => {
-            console.log("previous");
-          }, 
-        }),
-      ]
-    }),
-    width: "20%",
-    height: "6em",
-    color: "#a24857"
-  });
-  let rightButton = SizedBox({
-    child: Button({
-      child: Text({
-      text: "⮞",
-        color: "",
-        variant: "headline-small",
-      }),
-      animations: ["navHoverAnim"],
-      backgroundColor: "transparent",
-      onClick: () => {
-        console.log("next");
-      }, 
-    }),
-    width: "20%",
-    height: "6em",
-    color: "#a24857"
-  });
-
+  const cid = id || "c-" + Math.random().toString(36).slice(2, 7);
+  
+  const nav = (dir) => {
+    const box = document.getElementById(cid);
+    if (!box) return;
+    let i = (+box.dataset.i || 0) + dir;
+    i = (i % images.length + images.length) % images.length;
+    box.dataset.i = i;
+    box.querySelector("img").src = images[i];
+  };
 
   return Row({
+    id: cid,
+    "data-i": "0",
     children: [
-      leftButton,
       SizedBox({
-        width:"30%", 
-        color: "linear-gradient(to right, #a24857, white)",
-        height: "6em"
-      }),
-      Image({
-        id: id+"'s displayed image",
-        src: images[index],
-        height: "6em"
+        child: Button({
+          child: Text({ text: "⮜", variant: "headline-small" }),
+          backgroundColor: "transparent",
+          onClick: () => nav(-1)
+        }),
+        width: "20%", height: "6em", color: "#a24857"
       }),
       SizedBox({
-        width:"30%", 
-        color: "linear-gradient(to left, #a24857, white)",
-        height: "6em"
+        width: "30%", height: "6em",
+        color: "linear-gradient(to right, #a24857, white)"
       }),
-      rightButton
+      Image({ src: images[0], height: "6em" }),
+      SizedBox({
+        width: "30%", height: "6em",
+        color: "linear-gradient(to left, #a24857, white)"
+      }),
+      SizedBox({
+        child: Button({
+          child: Text({ text: "⮞", variant: "headline-small" }),
+          backgroundColor: "transparent",
+          onClick: () => nav(1)
+        }),
+        width: "20%", height: "6em", color: "#a24857"
+      })
     ],
     gap: "0px"
   });
