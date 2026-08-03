@@ -104,26 +104,49 @@
     <div class = "centered" id="c">
       <script>
         function main(){
-          document.getElementById("c").appendChild(Column({
-            children: [
-              ...(!isMobile()) ? [Text({
+          var invyButton = Button({
+                child: Text({
+                  text: "2027 Invitational",
+                  align: "center",
+                  color: "",
+                  variant: "body-medium",
+                  animations: ["theFade"],
+                  font: "Roboto"
+                }),
+                align: "center",
+                animations: ["theFade"],
+                height: "50px",
+                padding: "10px",
+                margin: "0px",
+                backgroundColor: "",
+                border: "2px solid #FDE992",
+                animations: ["showMoreHoverAnim"],
+                onClick: () => {
+    window.location.href = "/invitational.html";
+  },
+              });
+          
+          document.getElementById("c").appendChild(Column({ children: [
+              Text({
                 id: "banner",
-                text: "— South Windsor High School —",
+                text: "— SWHS Science Olympiad —",
                 variant: "headline-small",
                 align: "center",
                 color: "#FFFFC5",
                 animations: ["theFade"],
-              })] : [],
-              Text({
-                id: "banner",
-                text: "Connecticut's Science Olympiad Champion",
-                variant: "headline-large",
-                align: "center",
-                color: "white",
-                animations: ["theFade"],
-                font: "Roboto"
               }),
-              ...(!isMobile()) ? [Button({
+              ...(!isMobile() ? [
+                Text({
+                  id: "banner",
+                  text: "Connecticut's Science Olympiad Champion",
+                  variant: "headline-large",
+                  align: "center",
+                  color: "white",
+                  animations: ["theFade"],
+                  font: "Roboto"
+                })
+                ] : []),
+              ...(!isMobile() ? [Row({ children: [Button({
                 child: Text({
                   text: "Show More",
                   align: "center",
@@ -219,7 +242,7 @@
                       Line({}),
                         SizedBox({
                           child: Text({
-                          text: "Over the years, we have won 1st place the CT State Science Olympiad tournament three times and have finished 2nd 14 times. Last season, we won 12 medals. This year, we hope to beat that number as we are always improving. Our team has done very well at invitational torunaments at prestigious universities, including Cornell, MIT, and Yale. We have also competed in the National Science Olympiad tournament every time we have won the state tournament (3 times)",
+                          text: "Over the years, we have won 1st place the CT State Science Olympiad tournament five times in a row and have finished 2nd 14 times. Last season, we won 12 medals. This year, we hope to beat that number as we are always improving. Our team has done very well at invitational torunaments at prestigious universities, including Cornell, MIT, and Yale. We have also competed in the National Science Olympiad tournament every time we have won the state tournament (3 times)",
                           variant: "body-medium",
                         }),
                       }),
