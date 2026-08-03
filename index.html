@@ -86,10 +86,6 @@
     </style>
 </head> 
 <body >
-  <script>
-    var viewportWidth  = document.documentElement.clientWidth*0.50984308130;
-    document.getElementsByClassName("image-container-homepage")[0].style.height=viewportWidth;
-  </script>
     <div class="background">
   <div class="image-container-homepage", id="image_container">
     <div class="nav-bar" id= "nav-bar-modern">
@@ -103,6 +99,8 @@
     </div>
     <div class = "centered" id="c">
       <script>
+        var viewportWidth  = document.documentElement.clientWidth*0.50984308130;
+        document.getElementsByClassName("image-container-homepage")[0].style.height=viewportWidth;
         function main(){
           var invyButton = Button({
                 child: Text({
@@ -163,7 +161,7 @@
                 backgroundColor: "",
                 border: "2px solid #FFFFC5",
                 animations: ["showMoreHoverAnim"],
-                onClick: () => window.location.href = "invitational.html";
+                onClick: () => window.location.href = "invitational.html"
               })] : []
             ]
           }));
