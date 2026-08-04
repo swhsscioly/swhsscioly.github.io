@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" prefix="https://swhsscioly.github.io/">
   <html prefix="og: https://ogp.me/ns#">
@@ -86,6 +85,10 @@
     </style>
 </head> 
 <body >
+  <script>
+    var viewportWidth  = document.documentElement.clientWidth*0.50984308130;
+    document.getElementsByClassName("image-container-homepage")[0].style.height=viewportWidth;
+  </script>
     <div class="background">
   <div class="image-container-homepage", id="image_container">
     <div class="nav-bar" id= "nav-bar-modern">
@@ -99,8 +102,6 @@
     </div>
     <div class = "centered" id="c">
       <script>
-        var viewportWidth  = document.documentElement.clientWidth*0.50984308130;
-        document.getElementsByClassName("image-container-homepage")[0].style.height=viewportWidth;
         function main(){
           var invyButton = Button({
                 child: Text({
@@ -161,8 +162,8 @@
                 backgroundColor: "",
                 border: "2px solid #FFFFC5",
                 animations: ["showMoreHoverAnim"],
-                onClick: () => window.location.href = "invitational.html"
-              })] : []
+                onClick: () => window.scrollTo({top: document.getElementById("image_container").offsetHeight, left: 0, behavior: 'smooth'}),
+              }), invyButton]})] : [invyButton])
             ]
           }));
         }
@@ -183,7 +184,7 @@
                     children: [
                       SizedBox({height: "10px"}),
                       Image({
-                        src: "images/Yale 2025/DSC_0459.JPG",
+                        src: "images/Past Images/2018 MIT.jpg",
                         alt: "The South Windsor High School Science Olympiad Team at the MIT Invitational in 2018",
                         height: "10em",
                         animations: ["fadeInPopImage"]
@@ -199,7 +200,7 @@
                         children: [
                           SizedBox({
                             child: Text({
-                              text: "Founded in 2003, the South Windsor High School Science Olympiad team is a group of motivated and bright students at South Windsor High School who compete in the nation's most prestigious science tournament. Every year, we assemble teams and compete at invitational and state tournaments. Science Olympiad is challenging and requires great amounts of dedication and effort from every student. We give up our free time to study science because science inspires us and motivates us.",
+                              text: "Founded in 2003, the South Windsor High School Science Olympiad team is a group of motivated and bright students at South Windsor High School who compete in the nation's most prestigious science tournament. Every year, we assemble two teams and compete at invitational and state tournaments. Science Olympiad is challenging and requires great amounts of dedication and effort from every student. We give up our free time to study science because science inspires us and motivates us.",
                               variant: "body-medium",
                             }),
                           }),
@@ -207,7 +208,7 @@
                         align: "flex",
                       }),
                       Image({
-                        src: "images/Yale 2025/DSC_0459.JPG",
+                        src: "images/Past Images/2019 States .jpg",
                         alt: "The South Windsor High School Science Olympiad Team at the States Division at the University of Connecticut in the year 2019",
                        height: "10em",
                         animations: ["fadeInPopImage"]
@@ -221,12 +222,12 @@
                       Line({}),
                       SizedBox({
                         child: Text({
-                          text: "We push our intellectual limits in the pursuit of knowledge and joy. Throughout the years, we have won numerous tournaments due to the hard work of our team. Recently, our team has won the Connecticut State Science Olympiad tournament four years in a row and has appeared at the national tournament. Our success is a direct result of the work every team member puts in everyday after school. We have also crafted a nationwide alumni network of scientists and engineers who advance the frontiers of science and technology everyday.",
+                          text: "We push our intellectual limits in the pursuit of knowledge and joy. Throughout the years, we have won numerous tournaments due to the hard work of our team. Recently, our team has won the Connecticut State Science Olympiad tournament two years in a row and has appeared at the national tournament. Our success is a direct result of the work every team member puts in everyday after school. We have also crafted a nationwide alumni network of scientists and engineers who advance the frontiers of science and technology everyday.",
                           variant: "body-medium",
                         }),
                       }),
                       Image({
-                        src: "images/Yale 2025/Copy of IMG_9215.JPG",
+                        src: "images/Past Images/2017 States.jpg",
                         alt: "SWHS SciOly Team at the Connecticut States Invitational, 2017",
                         height: "10em", 
                         animations: ["fadeInPopImage"]
@@ -246,7 +247,7 @@
                       }),
 
                       Image({
-                        src: "images/States_2025/WhatsApp Image 2025-03-22 at 22.17.12.jpeg",
+                        src: "images/Past Images/states2022.png",
                         alt: "Celebrating after our win at the States Division, 2022",
                         height: "10em",
                         animations: ["fadeInPopImage"]
@@ -260,7 +261,7 @@
                       Line({}),
                       SizedBox({
                         child: Text({
-                        text: "The 2024-25 season for the SWHS Science Olympiad team was a massive success. Starting the season off strong with multiple medals at the Cornell Invitational (including a 1-2 in the Pokemon trial event), the team went on to host the first SWHS Invitational, which was a massive success. The team would find more success, placing 5th and 8th overall at CRI and 4th and 8th overall at Yale. The team would once again be crowned CT State Champions, with the B team placing 2nd overall and C team placing 8th (unoffically) overall as well. The season ended at the 2025 National Tournament in Lincoln, NE, where the team placed 37th overall, including a 3rd place medal in Protien Modeling. The team is looking forward to an even better 2025-26 season.",
+                        text: "We push our intellectual limits in the pursuit of knowledge and joy. Throughout the years, we have won numerous tournaments due to the hard work of our team. Recently, our team has won the Connecticut State Science Olympiad tournament two years in a row and has appeared at the national tournament. Our success is a direct result of the work every team member puts in everyday after school. We have also crafted a nationwide alumni network of scientists and engineers who advance the frontiers of science and technology everyday.",
                         variant: "body-medium",
                         }),
                       }),
@@ -290,12 +291,12 @@
                         children: [
                           SizedBox({
                             child: Text({
-                              text: "Founded in 2003, the South Windsor High School Science Olympiad team is a group of motivated and bright students at South Windsor High School who compete in the nation's most prestigious science tournament. Every year, we assemble teams and compete at invitational and state tournaments. Science Olympiad is challenging and requires great amounts of dedication and effort from every student. We give up our free time to study science because science inspires us and motivates us.",
+                              text: "Founded in 2003, the South Windsor High School Science Olympiad team is a group of motivated and bright students at South Windsor High School who compete in the nation's most prestigious science tournament. Every year, we assemble two teams and compete at invitational and state tournaments. Science Olympiad is challenging and requires great amounts of dedication and effort from every student. We give up our free time to study science because science inspires us and motivates us.",
                               variant: "body-medium",
                             }),
                           }),
                           Image({
-                            src: "images/Nationals-2025/CT-SouthWindsor.jpg",
+                            src: "images/Past Images/2018 MIT.jpg",
                             alt: "The South Windsor High School Science Olympiad Team at the MIT Invitational in 2018",
                             height: "10em",
                             animations: ["fadeInPopImage"]
@@ -314,12 +315,12 @@
                         children: [
                           SizedBox({
                             child: Text({
-                              text: "We push our intellectual limits in the pursuit of knowledge and joy. Throughout the years, we have won numerous tournaments due to the hard work of our team. Recently, our team has won the Connecticut State Science Olympiad tournament four years in a row and has appeared at the national tournament. Our success is a direct result of the work every team member puts in everyday after school. We have also crafted a nationwide alumni network of scientists and engineers who advance the frontiers of science and technology everyday.",
+                              text: "We push our intellectual limits in the pursuit of knowledge and joy. Throughout the years, we have won numerous tournaments due to the hard work of our team. Recently, our team has won the Connecticut State Science Olympiad tournament two years in a row and has appeared at the national tournament. Our success is a direct result of the work every team member puts in everyday after school. We have also crafted a nationwide alumni network of scientists and engineers who advance the frontiers of science and technology everyday.",
                               variant: "body-medium",
                             }),
                           }),
                           Image({
-                            src: "images/Yale 2025/DSC_0459.JPG",
+                            src: "images/Past Images/2019 States .jpg",
                             alt: "The South Windsor High School Science Olympiad Team at the States Division at the University of Connecticut in the year 2019",
                             height: "10em",
                             animations: ["fadeInPopImage"]
@@ -343,7 +344,7 @@
                             }),
                           }),
                           Image({
-                            src: "images/Yale 2025/Copy of IMG_9215.JPG",
+                            src: "images/Past Images/2017 States.jpg",
                             alt: "SWHS SciOly Team at the Connecticut States Invitational, 2017",
                             height: "10em", 
                             animations: ["fadeInPopImage"]
@@ -362,12 +363,12 @@
                         children: [
                           SizedBox({
                             child: Text({
-                              text: "The 2024-25 season for the SWHS Science Olympiad team was a massive success. Starting the season off strong with multiple medals at the Cornell Invitational (including a 1-2 in the Pokemon trial event), the team went on to host the first SWHS Invitational, which was a massive success. The team would find more success, placing 5th and 8th overall at CRI and 4th and 8th overall at Yale. The team would once again be crowned CT State Champions, with the B team placing 2nd overall and C team placing 8th (unoffically) overall as well. The season ended at the 2025 National Tournament in Lincoln, NE, where the team placed 37th overall, including a 3rd place medal in Protien Modeling. The team is looking forward to an even better 2025-26 season.",
+                              text: "We push our intellectual limits in the pursuit of knowledge and joy. Throughout the years, we have won numerous tournaments due to the hard work of our team. Recently, our team has won the Connecticut State Science Olympiad tournament two years in a row and has appeared at the national tournament. Our success is a direct result of the work every team member puts in everyday after school. We have also crafted a nationwide alumni network of scientists and engineers who advance the frontiers of science and technology everyday.",
                               variant: "body-medium",
                             }),
                           }),
                           Image({
-                            src: "images/States_2025/WhatsApp Image 2025-03-22 at 22.17.12.jpeg",
+                            src: "images/Past Images/states2022.png",
                             alt: "Celebrating after our win at the States Division, 2022",
                             height: "10em",
                             animations: ["fadeInPopImage"]
@@ -488,6 +489,4 @@
 </footer>
     </div>
 </html>
-
-
 
